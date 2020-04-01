@@ -7,11 +7,9 @@ DB 인스턴스 탭에서는 DB 인스턴스의 생성, 수정, 삭제 등의 �
 ### DB 인스턴스 생성
 
 DB 인스턴스를 생성하려면 먼저 DB 인스턴스 리스트 화면 좌측 상단의 [DB 인스턴스 생성] 버튼을 클릭하여 DB 인스턴스 생성 화면으로 이동합니다.
-
-![DB 인스턴스 생성 001](http://static.toastoven.net/prod_rds_mssql/db_instance_create_001.png)
-
 생성하고자 하는 DB 인스턴스의 사양, 정보, 네트워크, 플로팅 IP, DB 보안 그룹, 백업 설정을 입력한 후 [DB 인스턴스 생성] 버튼을 클릭하여 DB 인스턴스 생성 요청을 합니다.
 
+![DB 인스턴스 생성 001](http://static.toastoven.net/prod_rds_mssql/db_instance_create_001.png)
 * ❶ Compute & Network 서비스에서 생성한 VPC 서브넷을 선택할 수 있습니다.
 * ❷ DB 보안 그룹이 없을 경우, [DB 보안 그룹 생성] 버튼을 클릭하여 즉시 생성, 적용할 수 있습니다.
 * 그외 자세한 사항은 [DB 인스턴스](./db-instance) 와 [데이터베이스 접속](./database-connection) 을 참고합니다.
@@ -20,11 +18,10 @@ DB 인스턴스 생성 요청에 성공하면, 자동으로 DB 인스턴스 리�
 
 ### DB 인스턴스 목록
 
-![DB 인스턴스 목록 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_001.png)
-
 DB 인스턴스의 간략한 정보 목록을 조회할 수 있습니다. 
 한 화면에 최대 50개의 DB 인스턴스 목록이 노출됩니다. 
 
+![DB 인스턴스 목록 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_001.png)
 * ❶ DB 인스턴스 이름 및 UUID 로 검색할 수 있습니다.
 * ❷ 조건 버튼 클릭 시, 가용성 영역과 DB 인스턴스 상태로 검색 결과를 필터링할 수 있습니다.
 ![DB 인스턴스 리스트 > 조건 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_cond_001.png)
@@ -35,14 +32,15 @@ DB 인스턴스의 간략한 정보 목록을 조회할 수 있습니다.
 
 ### DB 인스턴스 수정
 
+사용 가능 상태의 DB 인스턴스는 웹콘솔을 통해 손쉽게 주요 설정을 변경할 수 있습니다.
+
 ![DB 인스턴스 리스트 002](http://static.toastoven.net/prod_rds_mssql/db_instance_list_002.png)
 * ❶ 수정하고자 하는 DB 인스턴스를 목록에서 선택 후, 우측 상단의 수정 버튼을 클릭합니다.
-
-![DB 인스턴스 수정 001](http://static.toastoven.net/prod_rds_mssql/db_instance_modify_001.png)
 
 변경하고자 하는 설정을 변경 후, 페이지 하단의 [수정] 버튼을 클릭하여 DB 인스턴스를 수정합니다.
 DB 인스턴스 수정 요청에 성공하면, 자동으로 DB 인스턴스 리스트로 이동합니다. DB 인스턴스 수정에는 몇 분에서 몇십 분이 소요됩니다.
 
+![DB 인스턴스 수정 001](http://static.toastoven.net/prod_rds_mssql/db_instance_modify_001.png)
 * ❶ 가용성 영역은 변경할 수 업습니다.
 * ❷ DB 인스턴스 타입 변경 시, 데이터베이스가 재시작됩니다.
 * ❸ 스토리지 타입은 변경할 수 업습니다.
@@ -59,10 +57,9 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 #### 기본 정보
 
-![DB 인스턴스 상세 > 기본 정보 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_inst_001.png)
-
 선택한 DB 인스턴스의 기본정보를 확인할 수 있습니다.
 
+![DB 인스턴스 상세 > 기본 정보 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_inst_001.png)
 * ❶ [변경] 버튼 클릭 시, DB 인스턴스의 이름을 변경할 수 있습니다.
 * ❷ [복사] 버튼 클릭 시, DB 인스턴스의 아이디를 클립보드로 복사합니다.
 * ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다.
@@ -70,34 +67,32 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 #### 모니터링
 
-![DB 인스턴스 상세 > 모니터링 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
-
 선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. 자세한 사용법은 [서버 대시보드](./console-guide) 를 참고합니다.
+
+![DB 인스턴스 상세 > 모니터링 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
 #### 이벤트
 
-![DB 인스턴스 상세 > 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
-
 선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [이벤트](./console-guide) 를 참고합니다.
 
-#### 로그
+![DB 인스턴스 상세 > 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 
-![DB 인스턴스 상세 > 로그 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
+#### 로그
 
 선택한 DB 인스턴스에서 발생한 Microsoft SQL Server 의 에러로그를 확인할 수 있습니다. 
 에러로그 내용을 최신 순으로 정렬하며, 한화면에 최대 10줄의 에러로그를 확인할 수 있습니다.
 
+![DB 인스턴스 상세 > 로그 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
 * ❶ 조회 기간을 선택합니다. 별도로 지정하지 않으면 최근 일주일간의 에러로그를 조회합니다.
 * ❷ 조회 기간을 기본값으로 초기화합니다.
 * ❸ 현재 목록을 갱신하거나, 10줄 이상의 에러로그가 있을 경우, 페이지 이동을 할 수 있습니다.
 
 #### 백업
 
-![DB 인스턴스 상세 > 백업 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
-
 선택한 DB 인스턴스의 백업 관련 설정 정보 및 백업 파일에 대한 정보를 확인할 수 있습니다.
 한 화면에 최대 50개의 백업 목록이 노출됩니다. 
 
+![DB 인스턴스 상세 > 백업 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
 * ❶ 백업 수행 시간이 노출됩니다. 백업 수행 시간을 지정하지 않았을 경우 시스템에서 지정한 시간이 노출됩니다.
 * ❷ 가장 최근 수행된 백업의 생성 시각이 노출됩니다.
 * ❸ 백업 이름으로 검색할 수 있습니다.
@@ -113,7 +108,6 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 ### 백업 목록
 
 ![백업 목록 001](http://static.toastoven.net/prod_rds_mssql/backup_list_001.png)
-
 * ❶ 백업 이름으로 검색할 수 있습니다.
 * ❷ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다.
 * ❸ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다.
@@ -123,16 +117,52 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 ### 백업 생성
 
 백업 탭의 [백업 생성] 버튼을 클릭하면 백업을 생성하기 위한 팝업이 노출됩니다.
-
-![백업 목록 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
-
 DB 인스턴스를 선택하고, 이름을 입력한 후 [생성] 버튼을 클릭하면 백업이 수행됩니다.
 
+![백업 목록 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
 * ❶ 백업하려는 DB 인스턴스를 선택합니다. 현재 사용가능한 DB 인스턴스만 노출됩니다.
 * ❷ 백업 이름을 입력합니다.
 * 그외 자세한 사항은 [백업 및 복원](./backup-restore) 을 참고합니다.
 
 ## 이벤트
+
+이벤트 탭에서는 최근 발생한 이벤트를 확인하거나, 이벤트 구독에 관한 설정을 할 수 있습니다.
+이벤트와 구독에 대한 자세한 설명은 [모니터링](./monitoring#_2) 을 참고합니다.
+
+### 최근 이벤트 목록
+
+최근 발생한 이벤트를 확인할 수 있습니다. 한 번에 50개의 이벤트가 노출되며, 다양한 조건으로 필터링할 수 있습니다.
+
+![최근 이벤트 목록 001](http://static.toastoven.net/prod_rds_mssql/event_list_001.png)
+* ❶ 노출될 이벤트 유형을 선택합니다.
+* ❷ 검색어로 검색할 대상을 선택합니다. 이벤트 소스 및 메시지로 검색할 수 있습니다.
+* ❸ 노출된 이벤트 발생 일시를 선택합니다.
+* ❹ [초기화] 버튼 클릭 시, 모든 검색 조건을 기본값으로 설정합니다.
+* ❺ 현재 목록을 갱신하거나, 50개 이상의 이벤트가 있을 경우, 페이지 이동을 할 수 있습니다.
+
+### 이벤트 구독하기
+
+이벤트 구독 목록 상단의 [이벤트 구독 등록] 버튼을 클릭하면 이벤트를 구독할 수 있는 팝업이 노출됩니다.
+구독할 이벤트 정보를 입력 후, 팝업 하단의 [생성] 버튼을 클릭하면 이벤트를 구독할 수 있습니다.
+
+![이벤트 구독 팝업 001](http://static.toastoven.net/prod_rds_mssql/event_subscription_001.png)
+* ❶ 이벤트 유형에 따라 이벤트 코드, 이벤트 소스를 좀더 세분화해서 선택할 수 있습니다.
+* ❷ 프로젝트의 멤버만 사용자 목록에 노출됩니다. 실명 인증을 한 멤버만 이름과 SMS 가 추가로 노출됩니다.
+![이벤트 구독 팝업 002](http://static.toastoven.net/prod_rds_mssql/event_subscription_002.png)
+* 이벤트 유형을 선택하면 해당 유형에 속하는 이벤트 코드를 선택할 수 있습니다.
+![이벤트 구독 팝업 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
+* ❶ 자동 완성 입력을 지원합니다.
+  * 입력한 키워드에 따라 선택할 수 있는 이벤트 코드가 필터링 됩니다.
+  * 키보드 방향키 위, 아래 키로 이벤트 코드를 선택한 후 엔터를 누르면 자동완성됩니다.
+  * 이미 추가된 이벤트 코드는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
+* ❷ 마우스로 이벤트 코드를 선택할 수 있습니다.
+![이벤트 구독 팝업 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
+* 이벤트 유형에 따른 이벤트 소스가 노출됩니다.
+* ❶ 자동 완성 입력을 지원합니다.
+  * 입력한 키워드에 따라 선택할 수 있는 이벤트 소스가 필터링 됩니다.
+  * 키보드 방향키 위, 아래 키로 이벤트 소스를 선택한 후 엔터를 누르면 자동완성됩니다.
+  * 이미 추가된 이벤트 소스는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
+* ❷ 마우스로 이벤트 소스를 선택할 수 있습니다.
 
 ## 파라미터 그룹
 
