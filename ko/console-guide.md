@@ -74,7 +74,7 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 #### 모니터링
 
-선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. 자세한 사용법은 [서버 대시보드](./console-guide) 를 참고합니다.
+선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. 자세한 사용법은 [서버 대시보드](./console-guide#_17) 를 참고합니다.
 
 ![DB 인스턴스 상세 > 모니터링 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
@@ -269,3 +269,41 @@ DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 
 상세 보기 패널에서 DB 보안 그룹 정책을 선택하면 정책을 변경, 삭제할 수 있습니다.
 
 ## 서버 대시보드
+
+서버 대시보드 탭에서는 DB 인스턴스의 각종 성능 지표를 차트 형태로 확인할 수 있습니다.
+RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
+기본 레이아웃은 삭제 및 변경이 불가능합니다.
+
+![서버 대시보드 001](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_001.png)
+
+* ❶ 생성된 DB 인스턴스가 목록에 노출됩니다. DB 인스턴스 선택 시, 연관된 차트를 확인할 수 있습니다.
+* ❷ 레이아웃을 변경하여, 새로운 지표를 확인할 수 있습니다.
+* ❸ 차트 조회 기간을 현재 시각 기준으로 설정합니다.
+
+### 사용자 레이아웃의 활용
+
+[레이아웃 만들기] 버튼을 클릭하여, 레이아웃을 신규로 만들수 있습니다.
+
+![서버 대시보드 002](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_002.png)
+
+![서버 대시보드 003](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_003.png)
+
+신규로 생성한 레이아웃에 보고 싶은 차트를 추가할 수 있습니다.
+
+![서버 대시보드 004](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_004.png)
+
+레이아웃을 선택한 후, [차트 추가] 버튼을 누르면 차트 추가 팝업이 노출됩니다.
+
+![서버 대시보드 005](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_005.png)
+
+차트를 추가하면 레이아웃에 차트가 추가됩니다.
+
+![서버 대시보드 006](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_006.png)
+
+사용자 레이아웃의 차트는 자유롭게 배치를 수정하거나 크기를 변경할 수 있습니다.
+
+![서버 대시보드 007](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_007.png)
+
+* ❶ 1번 영역을 마우스로 드래그 & 드랍하여 위치를 변경할 수 있습니다.
+* ❷ 우측 하단 영역을 마우스로 드래그 & 드랍하여 크기를 변경할 수 있습니다.
+* ❸ 추가된 차트를 제거할 수 있습니다.
