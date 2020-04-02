@@ -80,7 +80,7 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 #### 이벤트
 
-선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [이벤트](./console-guide) 를 참고합니다.
+선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [이벤트](./console-guide#_9) 를 참고합니다.
 
 ![DB 인스턴스 상세 > 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 
@@ -233,5 +233,39 @@ DB 인스턴스를 선택하고, 이름을 입력한 후 [생성] 버튼을 클�
 ![파라미터 그룹 비교 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_diff_001.png)
 
 ## DB 보안 그룹
+
+DB 보안 그룹 탭에서는 DB 보안 그룹의 생성 및 삭제가 가능합니다. 또한 DB 보안 그룹에 정책을 추가, 수정, 삭제할 수 있습니다.
+DB 보안 그룹에 대한 자세한 설명은 [데이터베이스 접속](./database-connection) 을 참고합니다.
+
+### DB 보안 그룹 생성
+
+DB 보안 그룹 목록 상단의 [DB 보안 그룹 생성] 버튼을 클릭하면, DB 보안 그룹을 생성할 수 있는 팝업이 노출됩니다.
+
+![DB 보안 그룹 목록 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_list_001.png)
+![DB 보안 그룹 생성 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_create_001.png)
+
+* ❶ [+] 버튼을 클릭하여 보안 정책을 추가합니다.
+
+팝업 하단의 [확인] 버튼을 클릭하여 DB 보안 그룹을 생성합니다.
+
+### DB 보안 그룹 수정
+
+DB 보안 그룹 목록에서 수정하고자 하는 DB 보안 그룹을 선택 후, 상단의 [DB 보안 그룹 변경] 버튼을 클릭합니다.
+
+![DB 보안 그룹 수정 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_modify_001.png)
+
+DB 보안 그룹의 이름과 설명을 수정할 수 있으며, 보안 정책은 별도로 수정해야 합니다.
+
+### 보안 정책 수정
+
+DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 보안 정책을 확인, 수정할 수 있는 상세 보기 패널이 노출됩니다.
+
+![DB 보안 그룹 상세 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_001.png)
+
+상세 보기 패널의 [보안 정책 생성] 버튼을 클릭하면, 보안 정책을 생성할 수 있는 팝업이 노출됩니다.
+
+![DB 보안 그룹 상세 002](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_002.png)
+
+상세 보기 패널에서 DB 보안 그룹 정책을 선택하면 정책을 변경, 삭제할 수 있습니다.
 
 ## 서버 대시보드
