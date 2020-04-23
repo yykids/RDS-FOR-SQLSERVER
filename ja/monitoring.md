@@ -1,96 +1,96 @@
-## Database > RDS for SQL Server > 모니터링
+## Database > RDS for SQL Server > モニタリング
 
-DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
+DBインスタンスの各種性能指標およびDBインスタンス、バックアップ、パラメータグループとセキュリティグループで発生した各種イベントをモニタリングできます。
 
-## 서버 대시보드
+## サーバーダッシュボード
 
-서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
+サーバーダッシュボードを通して、性能指標をチャート形式で視覚化して確認できます。指標は1分毎に収集され、最長5年間保管されます。指標データは5分、30分、2時間、1日単位の平均値で集計されます。各集計単位の保管期間は下記の通りです。
 
-| 집계 단위 | 보관 기간 |
+| 集計単位 | 保管期間 |
 | - | - |
-| 1분 | 7일 |
-| 5분 | 1개월 |
-| 30분 | 6개월 |
-| 2시간 | 2년 |
-| 1일 | 5년 |
+| 1分 | 7日 |
+| 5分 | 1か月 |
+| 30分 | 6か月 |
+| 2時間 | 2年 |
+| 1日 | 5年 |
 
-차트는 원하는 레이아웃으로 배치할 수 있으며, 레이아웃을 여러 개 생성해 목적에 따라 관리할 수 있습니다.
+チャートは、任意のレイアウトで配置することができます。レイアウトを複数作成して目的に応じて管理できます。
 
-## 이벤트
+## イベント
 
-이벤트는 RDS for SQL Server 혹은 사용자에 의해 발생한 중요 사건을 의미합니다. 이벤트는 이벤트의 유형과 발생 일시, 원본 소스와 메시지로 구성됩니다. 이벤트는 웹 콘솔에서 조회 가능하며, 구독을 통해 이메일, SMS, 웹훅을 통해 이벤트 발생 알림을 받을 수 있습니다. 이벤트의 유형과 발생 가능한 이벤트는 아래와 같습니다.
+イベントはRDS for SQL Serverまたはユーザーにより発生した重要事件を意味します。イベントは、イベントのタイプと発生日時、原本ソースとメッセージで構成されます。イベントはWebコンソールで照会可能です。購読することでメール、SMS、Webフックを通してイベント発生通知を受信することができます。イベントのタイプと発生可能なイベントは、下記の通りです。
 
-| 이벤트 유형 | 이벤트 코드 | 이벤트 메시지 |
+| イベントタイプ | イベントコード | イベントメッセージ |
 | - | - | - |
-| DB_INSTANCE | DB_INSTANCE_CREATED | DB 인스턴스 생성 |
-| DB_INSTANCE | DB_INSTANCE_CREATED_FAIL | DB 인스턴스 생성 실패 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_START | DB 인스턴스 백업 시작 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_END | DB 인스턴스 백업 완료 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_FAIL | DB 인스턴스 백업 실패 |
-| DB_INSTANCE | DB_INSTANCE_DELETED | DB 인스턴스 백업 삭제 |
-| DB_INSTANCE | DB_INSTANCE_DELETED_FAIL | DB 인스턴스 백업 삭제 실패 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_START | DB 인스턴스 복원 시작 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_END | DB 인스턴스 복원 완료 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_FAIL | DB 인스턴스 복원 실패 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_START | DB 인스턴스 수정 시작 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_END | DB 인스턴스 수정 완료 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_FAIL | DB 인스턴스 수정 실패 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_START | DB 인스턴스 보안 그룹 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_END | DB 인스턴스 보안 그룹 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_FAIL | DB 인스턴스 보안 그룹 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_START | DB 인스턴스 재시작 시작 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_END | DB 인스턴스 재시작 완료 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_FAIL | DB 인스턴스 재시작 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_START | DB 인스턴스 비밀번호 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_END | DB 인스턴스 비밀번호 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_FAIL | DB 인스턴스 비밀번호 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_START | DB 인스턴스 포트 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_END | DB 인스턴스 포트 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_FAIL | DB 인스턴스 포트 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_START | DB 인스턴스 파라미터 그룹 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_END | DB 인스턴스 파라미터 그룹 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_FAIL | DB 인스턴스 파라미터 그룹 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_START | DB 인스턴스 타입 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_END | DB 인스턴스 타입 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_FAIL | DB 인스턴스 타입 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_START | DB 인스턴스 스토리지 크기 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_END | DB 인스턴스 스토리지 크기 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_FAIL | DB 인스턴스 스토리지 크기 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_START | DB 인스턴스 플로팅 IP 사용 여부 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_END | DB 인스턴스 플로팅 IP 사용 여부 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_FAIL | DB 인스턴스 플로팅 IP 사용 여부 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_START | DB 인스턴스 백업 설정 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_END | DB 인스턴스 백업 설정 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_FAIL | DB 인스턴스 백업 설정 변경 실패 |
-| BACKUP | BACKUP_START | 백업 시작 |
-| BACKUP | BACKUP_END | 백업 완료 |
-| BACKUP | BACKUP_DELETED | 백업 삭제 |
-| PARAMETER_GROUP | PARAMETER_GROUP_CREATED | 파라미터 그룹 생성 |
-| PARAMETER_GROUP | PARAMETER_GROUP_MODIFIED | 파라미터 그룹 수정 |
-| PARAMETER_GROUP | PARAMETER_GROUP_DELETED | 파라미터 그룹 삭제 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_CREATED | DB 보안 그룹 생성 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DB 보안 그룹 수정 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DB 보안 그룹 삭제 |
+| DB_INSTANCE | DB_INSTANCE_CREATED | DBインスタンス作成 |
+| DB_INSTANCE | DB_INSTANCE_CREATED_FAIL | DBインスタンス作成失敗 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_START | DBインスタンスバックアップ開始 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_END | DBインスタンスバックアップ完了 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_FAIL | DBインスタンスバックアップ失敗 |
+| DB_INSTANCE | DB_INSTANCE_DELETED | DBインスタンスバックアップ削除 |
+| DB_INSTANCE | DB_INSTANCE_DELETED_FAIL | DBインスタンスバックアップ削除失敗 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_START | DBインスタンス復元開始 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_END | DBインスタンス復元完了 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_FAIL | DBインスタンス復元失敗 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_START | DBインスタンス修正開始 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_END | DBインスタンス修正完了 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_FAIL | DBインスタンス修正失敗 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_START | DBインスタンスセキュリティグループ変更開始 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_END | DBインスタンスセキュリティグループ変更完了 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_FAIL | DBインスタンスセキュリティグループ変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_START | DBインスタンス再起動開始 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_END | DBインスタンス再起動完了 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_FAIL | DBインスタンス再起動失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_START | DBインスタンスパスワード変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_END | DBインスタンスパスワード変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_FAIL | DBインスタンスパスワード変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_START | DBインスタンスポート変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_END | DBインスタンスポート変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_FAIL | DBインスタンスポート変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_START | DBインスタンスパラメータグループ変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_END | DBインスタンスパラメータグループ変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PARAMETER_GROUP_FAIL | DBインスタンスパラメータグループ変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_START | DBインスタンスタイプ変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_END | DBインスタンスタイプ変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLAVOR_FAIL | DBインスタンスタイプ変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_START | DBインスタンスストレージサイズ変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_END | DBインスタンスストレージサイズ変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_STORAGE_SIZE_FAIL | DBインスタンスストレージサイズ変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_START | DBインスタンスFloating IP使用有無変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_END | DBインスタンスFloating IP使用有無変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_FLOATING_IP_FAIL | DBインスタンスFloating IP使用有無変更失敗 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_START | DBインスタンスバックアップ設定変更開始 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_END | DBインスタンスバックアップ設定変更完了 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_FAIL | DBインスタンスバックアップ設定変更失敗 |
+| BACKUP | BACKUP_START | バックアップ開始 |
+| BACKUP | BACKUP_END | バックアップ完了 |
+| BACKUP | BACKUP_DELETED | バックアップ削除 |
+| PARAMETER_GROUP | PARAMETER_GROUP_CREATED | パラメータグループ作成 |
+| PARAMETER_GROUP | PARAMETER_GROUP_MODIFIED | パラメータグループ修正 |
+| PARAMETER_GROUP | PARAMETER_GROUP_DELETED | パラメータグループ削除 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_CREATED | DBセキュリティグループ作成 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DBセキュリティグループ修正 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DBセキュリティグループ削除 |
 
-### 이벤트 구독
+### イベント購読
 
-이벤트 유형, 코드 및 소스로 구분하여 이벤트를 구독할 수 있습니다. 이벤트 유형으로 구독 시, 이벤트 유형에 포함된 모든 이벤트 코드에 대해서 알림을 받습니다. 알림이 너무 광범위할 경우 이벤트 코드와 소스로 세분화하여 구독할 수 있습니다. 
+イベントタイプ、コードおよびソースで区分してイベントを購読できます。イベントタイプで購読すると、イベントタイプに含まれるすべてのイベントコードの通知を受信します。通知があまりにも広範囲の場合、イベントコードとソースに細分化して購読できます。 
 
-프로젝트의 멤버만 알림을 받을 사용자로 선택할 수 있습니다. 기본적으로 이메일로 이벤트 알림이 발송되며, 실명인증을 통해 휴대폰 번호가 등록된 경우에만 SMS 로 추가 이벤트 알림이 발송됩니다. 메일과 SMS 이외에도 웹훅을 등록하면 사전에 정의된 양식으로 HTTP 요청을 보냅니다. 웹훅의 양식은 아래와 같습니다.
+プロジェクトのメンバーのみ、通知を受信するユーザーに選択できます。基本的にメールでイベント通知が送信され、実名認証により携帯電話番号が登録された場合にのみSMSで追加イベント通知が送信されます。メールとSMS以外にもWebフックを登録すると、事前に定義したフォーマットでHTTPリクエストを送ります。Webフックのフォーマットは下記の通りです。
 
 #### Method, URL
 ```
-POST {사용자가 등록한 웹훅 URL}
+POST {ユーザーが登録したWebフックURL}
 Content-Type: application/json;charset=UTF-8
 ```
 
 #### Request Body
 ```json
 {
-    "name": "이벤트 구독 이름",
-    "source": "이벤트 소스",
-    "sourceId": "이벤트 소스 아이디",
-    "category": "이벤트 유형",
-    "code": "이벤트 코드"
+    "name": "イベント購読名",
+    "source": "イベントソース",
+    "sourceId": "イベントソースID",
+    "category": "イベントタイプ",
+    "code": "イベントコード"
 }
 ```
