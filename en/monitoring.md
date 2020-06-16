@@ -1,12 +1,12 @@
-## Database > RDS for SQL Server > 모니터링
+## Database > RDS for SQL Server > Monitoring
 
-DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
+Performance indicators of dabase instance, as well as events occured at a database instance, backup, parameter group or security group can be monitored. DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
 
-## 서버 대시보드
+## 서버 대시보드 Server Dashboard
 
-서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
+Server Dashboard helps to visualize performance indicators on a chart. Indicators are collected at every minute and retained for up to 5 years. Indicator data are collected by the average of 5 minutes, 30 minutes, 2 hours, or 1 day. Each unit of collection can be retained like below:  서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
 
-| 집계 단위 | 보관 기간 |
+| Colle집계 단위 | 보관 기간 |
 | - | - |
 | 1분 | 7일 |
 | 5분 | 1개월 |
@@ -16,7 +16,7 @@ DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미�
 
 차트는 원하는 레이아웃으로 배치할 수 있으며, 레이아웃을 여러 개 생성해 목적에 따라 관리할 수 있습니다.
 
-## 이벤트
+## 이벤트 Event
 
 이벤트는 RDS for SQL Server 혹은 사용자에 의해 발생한 중요 사건을 의미합니다. 이벤트는 이벤트의 유형과 발생 일시, 원본 소스와 메시지로 구성됩니다. 이벤트는 웹 콘솔에서 조회 가능하며, 구독을 통해 이메일, SMS, 웹훅을 통해 이벤트 발생 알림을 받을 수 있습니다. 이벤트의 유형과 발생 가능한 이벤트는 아래와 같습니다.
 
@@ -72,25 +72,25 @@ DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미�
 | DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DB 보안 그룹 수정 |
 | DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DB 보안 그룹 삭제 |
 
-### 이벤트 구독
+### 이벤트 구독 Subscription of Events
 
-이벤트 유형, 코드 및 소스로 구분하여 이벤트를 구독할 수 있습니다. 이벤트 유형으로 구독 시, 이벤트 유형에 포함된 모든 이벤트 코드에 대해서 알림을 받습니다. 알림이 너무 광범위할 경우 이벤트 코드와 소스로 세분화하여 구독할 수 있습니다. 
+이벤트 유형, 코드 및 소스로 구분하여 이벤트를 구독할 수 있습니다. 이벤트 유형으로 구독 시, 이벤트 유형에 포함된 모든 이벤트 코드에 대해서 알림을 받습니다. 알림이 너무 광범위할 경우 이벤트 코드와 소스로 세분화하여 구독할 수 있습니다. You may subscribe to events by each category, code or source. When subscribed by event category, for example, you'll be notified on every event code included in the event category. If your notification range is too broad, subscription may be divided into event code or source.  
 
-프로젝트의 멤버만 알림을 받을 사용자로 선택할 수 있습니다. 기본적으로 이메일로 이벤트 알림이 발송되며, 실명인증을 통해 휴대폰 번호가 등록된 경우에만 SMS 로 추가 이벤트 알림이 발송됩니다. 메일과 SMS 이외에도 웹훅을 등록하면 사전에 정의된 양식으로 HTTP 요청을 보냅니다. 웹훅의 양식은 아래와 같습니다.
+프로젝트의 멤버만 알림을 받을 사용자로 선택할 수 있습니다. 기본적으로 이메일로 이벤트 알림이 발송되며, 실명인증을 통해 휴대폰 번호가 등록된 경우에만 SMS 로 추가 이벤트 알림이 발송됩니다. 메일과 SMS 이외에도 웹훅을 등록하면 사전에 정의된 양식으로 HTTP 요청을 보냅니다. 웹훅의 양식은 아래와 같습니다.Only project members can be selected as notified users. By default, event notification is sent by email, and if mobile phone number is registered from real-name verification, additional notification is sent via SMS. In addition to email and SMS, with webhook registration, HTTP request is sent on a pre-defined form.
 
 #### Method, URL
 ```
-POST {사용자가 등록한 웹훅 URL}
+POST {URL for user-registered webhook사용자가 등록한 웹훅 URL}
 Content-Type: application/json;charset=UTF-8
 ```
 
 #### Request Body
 ```json
 {
-    "name": "이벤트 구독 이름",
-    "source": "이벤트 소스",
-    "sourceId": "이벤트 소스 아이디",
-    "category": "이벤트 유형",
-    "code": "이벤트 코드"
+    "name": "Event Subscription Name이벤트 구독 이름",
+    "source": "Event Source이벤트 소스",
+    "sourceId": "Event Source ID이벤트 소스 아이디",
+    "category": "Event Category이벤트 유형",
+    "code": "Event Code이벤트 코드"
 }
 ```
