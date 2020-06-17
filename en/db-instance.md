@@ -1,6 +1,6 @@
 ## Database > RDS for SQL Server > Database Instance
 
-DB 인스턴스는 가상 장비와 설치된 Microsoft SQL Server 를 아우르는 개념으로, RDS for SQL Server 에서 제공하는 Microsoft SQL Server 의 단위입니다.
+Database instance 인스턴스는 가상 장비와 설치된 Microsoft SQL Server 를 아우르는 개념으로, RDS for SQL Server 에서 제공하는 Microsoft SQL Server 의 단위입니다.
 DB 인스턴스의 운영체제에 직접 접근할 수 없으며, 오직 DB 인스턴스 생성 시 입력하신 포트를 통해서 데이터베이스로만 접근 할 수 있습니다.
 DB 인스턴스는 고객이 부여하는 이름과 자동으로 부여되는 32바이트 아이디로 식별됩니다. 
 DB 인스턴스 이름은 아래와 같은 제약사항이 있습니다. A database instance must be named, considering the following constraints: 
