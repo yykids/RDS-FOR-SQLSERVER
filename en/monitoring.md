@@ -1,10 +1,10 @@
 ## Database > RDS for SQL Server > Monitoring
 
-Performance indicators of dabase instance, as well as events occured at a database instance, backup, parameter group or security group can be monitored. DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
+Performance indicators of a database instance, as well as events occurred at a database instance, backup, parameter group or security group can be monitored. DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
 
 ## 서버 대시보드 Server Dashboard
 
-Server Dashboard helps to visualize performance indicators on a chart. Indicators are collected at every minute and retained for up to 5 years. Indicator data are collected by the average of 5 minutes, 30 minutes, 2 hours, or 1 day. Each collecting unit can be retained like below:  서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
+Server Dashboard helps to visualize performance indicators on a chart. Indicators are collected at every minute and retained for up to 5 years. Indicator data are collected by the average of 5 minutes, 30 minutes, 2 hours, or 1 day. Each collecting unit provides different retention period like below:  서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
 
 | Unit of Collecting 집계 단위 | Retention Period보관 기간 |
 | - | - |
@@ -23,27 +23,27 @@ Chart layout is made available as user needs, and many number of layouts can be 
 | Event Category 이벤트 유형 | Event Code이벤트 코드 | Event Message 이벤트 메시지 |
 | - | - | - |
 | DB_INSTANCE | DB_INSTANCE_CREATED | Database instance created DB 인스턴스 생성 |
-| DB_INSTANCE | DB_INSTANCE_CREATED_FAIL | DB 인스턴스 생성 실패 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_START | Backup of Database Instance DB 인스턴스 백업 시작 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_END | DB 인스턴스 백업 완료 |
-| DB_INSTANCE | DB_INSTANCE_BACKUP_FAIL | DB 인스턴스 백업 실패 |
-| DB_INSTANCE | DB_INSTANCE_DELETED | DB 인스턴스 백업 삭제 |
-| DB_INSTANCE | DB_INSTANCE_DELETED_FAIL | DB 인스턴스 백업 삭제 실패 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_START | DB 인스턴스 복원 시작 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_END | DB 인스턴스 복원 완료 |
-| DB_INSTANCE | DB_INSTANCE_RESTORE_FAIL | DB 인스턴스 복원 실패 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_START | DB 인스턴스 수정 시작 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_END | DB 인스턴스 수정 완료 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_FAIL | DB 인스턴스 수정 실패 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_START | DB 인스턴스 보안 그룹 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_END | DB 인스턴스 보안 그룹 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_FAIL | DB 인스턴스 보안 그룹 변경 실패 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_START | DB 인스턴스 재시작 시작 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_END | DB 인스턴스 재시작 완료 |
-| DB_INSTANCE | DB_INSTANCE_REBOOT_FAIL | DB 인스턴스 재시작 실패 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_START | DB 인스턴스 비밀번호 변경 시작 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_END | DB 인스턴스 비밀번호 변경 완료 |
-| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_FAIL | DB 인스턴스 비밀번호 변경 실패 |
+| DB_INSTANCE | DB_INSTANCE_CREATED_FAIL | Creating DB instance failed DB 인스턴스 생성 실패 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_START | DB Instance backup started DB 인스턴스 백업 시작 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_END | DB instance backed up 인스턴스 백업 완료 |
+| DB_INSTANCE | DB_INSTANCE_BACKUP_FAIL | Backup of DB instance failed 인스턴스 백업 실패 |
+| DB_INSTANCE | DB_INSTANCE_DELETED | Backup of DB instance deleted 인스턴스 백업 삭제 |
+| DB_INSTANCE | DB_INSTANCE_DELETED_FAIL | Deleting DB instance backup failed 인스턴스 백업 삭제 실패 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_START | DB instance restoration started 인스턴스 복원 시작 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_END | DB instance restored  인스턴스 복원 완료 |
+| DB_INSTANCE | DB_INSTANCE_RESTORE_FAIL | DB instance restoration failed  인스턴스 복원 실패 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_START | DB instance modification started 인스턴스 수정 시작 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_END | DB instance modified 인스턴스 수정 완료 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_FAIL | DB instance modification failed 인스턴스 수정 실패 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_START | Change of DB instance security group started 인스턴스 보안 그룹 변경 시작 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_END | Change of DB instance security group completed 인스턴스 보안 그룹 변경 완료 |
+| DB_INSTANCE | DB_INSTANCE_MODIFY_SECURITY_GROUP_FAIL | Change of DB instance security group failed  인스턴스 보안 그룹 변경 실패 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_START | Restart of DB instance started  인스턴스 재시작 시작 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_END | Restart of DB instance completed  인스턴스 재시작 완료 |
+| DB_INSTANCE | DB_INSTANCE_REBOOT_FAIL | Restart of DB instance failed 인스턴스 재시작 실패 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_START | Change of DB instance password started  인스턴스 비밀번호 변경 시작 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_END | Change of DB instance password completed 인스턴스 비밀번호 변경 완료 |
+| DB_INSTANCE | DB_INSTANCE_CHANGE_PASSWORD_FAIL | Change of DB instance password failed 인스턴스 비밀번호 변경 실패 |
 | DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_START | DB 인스턴스 포트 변경 시작 |
 | DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_END | DB 인스턴스 포트 변경 완료 |
 | DB_INSTANCE | DB_INSTANCE_CHANGE_PORT_FAIL | DB 인스턴스 포트 변경 실패 |
@@ -62,15 +62,15 @@ Chart layout is made available as user needs, and many number of layouts can be 
 | DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_START | DB 인스턴스 백업 설정 변경 시작 |
 | DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_END | DB 인스턴스 백업 설정 변경 완료 |
 | DB_INSTANCE | DB_INSTANCE_CHANGE_BACKUP_CONFIG_FAIL | DB 인스턴스 백업 설정 변경 실패 |
-| BACKUP | BACKUP_START | 백업 시작 |
-| BACKUP | BACKUP_END | 백업 완료 |
-| BACKUP | BACKUP_DELETED | 백업 삭제 |
-| PARAMETER_GROUP | PARAMETER_GROUP_CREATED | 파라미터 그룹 생성 |
-| PARAMETER_GROUP | PARAMETER_GROUP_MODIFIED | 파라미터 그룹 수정 |
-| PARAMETER_GROUP | PARAMETER_GROUP_DELETED | 파라미터 그룹 삭제 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_CREATED | DB 보안 그룹 생성 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DB 보안 그룹 수정 |
-| DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DB 보안 그룹 삭제 |
+| BACKUP | BACKUP_START | Backup started 백업 시작 |
+| BACKUP | BACKUP_END | Backup completed 백업 완료 |
+| BACKUP | BACKUP_DELETED | Backup deleted 백업 삭제 |
+| PARAMETER_GROUP | PARAMETER_GROUP_CREATED | Parameter group created 파라미터 그룹 생성 |
+| PARAMETER_GROUP | PARAMETER_GROUP_MODIFIED | Parameter group modified 파라미터 그룹 수정 |
+| PARAMETER_GROUP | PARAMETER_GROUP_DELETED | Parameter group deleted 파라미터 그룹 삭제 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_CREATED | DB security group created 보안 그룹 생성 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DB security group modified 보안 그룹 수정 |
+| DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DB security group deleted 보안 그룹 삭제 |
 
 ### 이벤트 구독 Subscription of Events
 
