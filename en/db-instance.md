@@ -1,7 +1,7 @@
 ## Database > RDS for SQL Server > Database Instance
 
-Database instance 인스턴스는 가상 장비와 설치된 Microsoft SQL Server 를 아우르는 개념으로, RDS for SQL Server 에서 제공하는 Microsoft SQL Server 의 단위입니다.
-DB 인스턴스의 운영체제에 직접 접근할 수 없으며, 오직 DB 인스턴스 생성 시 입력하신 포트를 통해서 데이터베이스로만 접근 할 수 있습니다.
+Database instance 인스턴스는 가상 장비와 설치된 Microsoft SQL Server 를 아우르는 개념으로, RDS for SQL Server 에서 제공하는 Microsoft SQL Server 의 단위입니다. Database instance encompasses virtual equipment and installed Microsoft SQL Server, serving as the unit of Microsoft SQL Server provided by RDS for SQL Server. 
+Direct access to a database instance is not allowed, but access is enabled only through the port entered when creating the database instance. DB 인스턴스의 운영체제에 직접 접근할 수 없으며, 오직 DB 인스턴스 생성 시 입력하신 포트를 통해서 데이터베이스로만 접근 할 수 있습니다.
 DB 인스턴스는 고객이 부여하는 이름과 자동으로 부여되는 32바이트 아이디로 식별됩니다. 
 DB 인스턴스 이름은 아래와 같은 제약사항이 있습니다. A database instance must be named, considering the following constraints: 
 
@@ -13,7 +13,7 @@ DB 인스턴스는 생성 시, 사용자 계정과 비밀번호를 설정해야 
 
 * 사용자 계정은 4 ~ 16자 사이의 알파벳, 숫자만 입력 가능하며, 첫 번째 문자는 글자이어야 합니다. A user account must be between 4 and 16 characters, comprised of alphabets and numbers only, starting with a letter. 
 * 비밀번호는 8 ~ 128자 사이의 알파벳, 숫자, !, $, #, % 만 사용 가능합니다. A password must be between 8 and 128, comprised of alphabets, numbers, !, $, #, and % only. 
-* 비밀번호에는 사용자의 계정 이름이 포함될 수 없습니다. Password cannot include a user's account name. 
+* 비밀번호에는 사용자의 계정 이름이 포함될 수 없습니다. Password cannot include user's account name. 
 * 비밀번호는 대문자, 소문자, 숫자, 특수문자 중 세 범주의 문자를 포함해야 합니다. Password must include at least three categories out of capital letters, small-case letters, numbers, and special characters. 
 
 ### 가용성 영역 Availability Area
