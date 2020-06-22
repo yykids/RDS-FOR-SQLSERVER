@@ -7,8 +7,8 @@ DB 인스턴스의 데이터베이스를 복구할 수 있도록 미리 준비�
 수동으로 생성한 백업을 이용하여 특정 시각으로 복원을 하거나, 백업 보관 기간 중 어느 한 시점으로 복원을 할 수 있습니다.
 
 > [Caution]
-> 백업이 실행되는 동안에는 백업으로 인한 성능 저하가 발생 할 수 있습니다. 
-> 서비스에 영향을 주지 않기 위해서, 서비스의 부하가 적은 시간에 백업을 하는 것이 유리합니다.
+> 백업이 실행되는 동안에는 백업으로 인한 성능 저하가 발생 할 수 있습니다. You may expect a performance downgrade due to backup while backup is underway. 
+> 서비스에 영향을 주지 않기 위해서, 서비스의 부하가 적은 시간에 백업을 하는 것이 유리합니다. To minimize the impact on service, backup is recommened while service workload is low.
 
 ### 백업 스토리지 Backup Storage 
 
@@ -29,12 +29,12 @@ DB 인스턴스의 백업 보관 기간을 1일 이상으로 설정하면 자동
 
 ## 복원 Restoration
 
-RDS for SQL Server 는 백업 파일을 이용하여 백업된 순간으로 복원을 하거나, 복원을 원하는 어느 한 시점을 선택하여 복원을 할수 있습니다. 복원을 하게 되면 기존 DB 인스턴스와 무관한, 신규 DB 인스턴스가 생성됩니다. 복원된 DB 인스턴스는 데이터베이스만 복원되므로, 파라미터 그룹과 보안 그룹을 새롭게 설정해야 합니다. 새로운 파라미터 그룹을 설정할수는 있으나, 백업할 당시의 파라미터 그룹을 사용하여 복원하는 것을 추천합니다.With RDS for SQL Server, restoration is available to a backup moment by using backup files, or to a point in time. With restoration, a new database instance is created, which is irrelevant to an existint database instance. Since restored database instance regards to database only, a new setting of parameter and security groups is required. Setting of a new parameter group is available, but it is recommended to restore with   
+RDS for SQL Server 는 백업 파일을 이용하여 백업된 순간으로 복원을 하거나, 복원을 원하는 어느 한 시점을 선택하여 복원을 할수 있습니다. 복원을 하게 되면 기존 DB 인스턴스와 무관한, 신규 DB 인스턴스가 생성됩니다. 복원된 DB 인스턴스는 데이터베이스만 복원되므로, 파라미터 그룹과 보안 그룹을 새롭게 설정해야 합니다. 새로운 파라미터 그룹을 설정할수는 있으나, 백업할 당시의 파라미터 그룹을 사용하여 복원하는 것을 추천합니다. RDS for SQL Server helps to restore to a backup moment by using backup files, or to a point in time. With restoration, a new database instance is created, which is irrelevant to an existing database instance. Since restored database instance regards to database only, a new setting of a parameter and a security group is required. Setting of a new parameter group is available, but it is recommended to restore with the parameter group from the backup time.    
 
-### 백업을 이용한 복원
+### 백업을 이용한 복원 Restoration with Backups 
 
 수동 혹은 자동 백업을 이용하여 DB 인스턴스를 복원할 수 있습니다. 복원에 걸리는 시간은 백업의 크기에 따라 다르며, 수분에서 수십 분이 소요됩니다. 
-복원할 DB 인스턴스의 타입과 파라미터 그룹은 백업할 당시의 DB 인스턴스와 동일하게 설정하는 것을 권장합니다.
+복원할 DB 인스턴스의 타입과 파라미터 그룹은 백업할 당시의 DB 인스턴스와 동일하게 설정하는 것을 권장합니다. With manual or auto-backups, database instance can be restored. Restoration time depends on the backup size, from minutes up to dozones of minutes. It is recommended to apply the same type of database instance and parameter group 
 
 ### 백업 보관 기간 중 어느 한 시점으로 복원
 
