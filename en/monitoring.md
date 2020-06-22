@@ -2,11 +2,11 @@
 
 Performance indicators of a database instance, as well as events occurred at a database instance, backup, parameter group or security group can be monitored. DB 인스턴스의 각종 성능 지표 및 DB 인스턴스, 백업, 파라미터 그룹과 보안 그룹에서 발생한 각종 이벤트를 모니터링할 수 있습니다.
 
-## 서버 대시보드 Server Dashboard
+## Server Dashboard
 
-Server Dashboard helps to visualize performance indicators on a chart. Indicators are collected at every minute and retained for up to 5 years. Indicator data are collected by the average of 5 minutes, 30 minutes, 2 hours, or 1 day. Each collecting unit provides different retention period like below:  서버 대시보드를 통해 성능 지표를 차트 형태로 시각화 하여 볼수 있습니다. 지표는 1분에 한번씩 수집되며 최대 5년간 보관됩니다. 지표 데이터는 5분, 30분, 2시간, 1일 단위의 평균값으로 집계됩니다. 집계 단위별 보관 기간은 아래와 같습니다.
+Server Dashboard helps to visualize performance indicators on a chart. Indicators are collected at every minute and retained for up to 5 years. Indicator data are collected by the average of 5 minutes, 30 minutes, 2 hours, or 1 day. Each collecting unit provides different retention period like below:  
 
-| Unit of Collecting 집계 단위 | Retention Period보관 기간 |
+| Collecting Unit | Retention Period |
 | - | - |
 | 1 minute | 7 days |
 | 5 minutes | 1 month |
@@ -14,13 +14,13 @@ Server Dashboard helps to visualize performance indicators on a chart. Indicator
 | 2 hours | 2 years |
 | 1 day | 5 years |
 
-Chart layout is made available as user needs, and many number of layouts can be created to meet management purposes.  차트는 원하는 레이아웃으로 배치할 수 있으며, 레이아웃을 여러 개 생성해 목적에 따라 관리할 수 있습니다.
+Chart layout is made available as user needs, and many number of layouts can be created to meet management purposes.  
 
-## 이벤트 Event
+## Event
 
-이벤트는 RDS for SQL Server 혹은 사용자에 의해 발생한 중요 사건을 의미합니다. 이벤트는 이벤트의 유형과 발생 일시, 원본 소스와 메시지로 구성됩니다. 이벤트는 웹 콘솔에서 조회 가능하며, 구독을 통해 이메일, SMS, 웹훅을 통해 이벤트 발생 알림을 받을 수 있습니다. 이벤트의 유형과 발생 가능한 이벤트는 아래와 같습니다. An event refers to an important incident incurred by RDS for SQL Server or user. An event is comprised of a category, date of occurrence, original source and message. It can be queried on a web console and notified via email, SMS, or webshook on subscription. Each event category may include event occurrences, like follows:  
+An event refers to an important incident incurred by RDS for SQL Server or user. An event is comprised of a category, date of occurrence, original source and message. It can be queried on a web console and notified via email, SMS, or webshook on subscription. Each event category may include event occurrences, like follows:  
 
-| Event Category 이벤트 유형 | Event Code이벤트 코드 | Event Message 이벤트 메시지 |
+| Event Category | Event Code이벤트 코드 | Event Message 이벤트 메시지 |
 | - | - | - |
 | DB_INSTANCE | DB_INSTANCE_CREATED | Database instance created DB 인스턴스 생성 |
 | DB_INSTANCE | DB_INSTANCE_CREATED_FAIL | Creating DB instance failed DB 인스턴스 생성 실패 |
