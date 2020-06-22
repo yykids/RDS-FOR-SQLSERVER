@@ -1,35 +1,35 @@
-## Database > RDS for SQL Server > 백업 및 복원
+## Database > RDS for SQL Server > Backup and Restoration
 
-## 백업
+## 백업 Backup
 
 DB 인스턴스의 데이터베이스를 복구할 수 있도록 미리 준비할 수 있습니다. RDS for SQL Server 는 개별 데이터베이스가 아닌 DB 인스턴스 전체를 백업합니다.
 원하는 시점에 수동으로 백업을 생성하거나 백업 보관 기간을 설정하여 자동으로 백업을 생성할 수 있습니다.
 수동으로 생성한 백업을 이용하여 특정 시각으로 복원을 하거나, 백업 보관 기간 중 어느 한 시점으로 복원을 할 수 있습니다.
 
-> [주의]
+> [Caution]
 > 백업이 실행되는 동안에는 백업으로 인한 성능 저하가 발생 할 수 있습니다. 
 > 서비스에 영향을 주지 않기 위해서, 서비스의 부하가 적은 시간에 백업을 하는 것이 유리합니다.
 
-### 백업 스토리지
+### 백업 스토리지 Backup Storage 
 
 RDS for SQL Server 는 모든 백업 파일을 별도의 백업 스토리지에 저장합니다. 백업 스토리지는 해당 리전의 모든 DB 인스턴스 스토리지 크기의 합만큼 무료로 제공되며, 초과분에 대해서는 별도로 과금됩니다.
 자동 백업 파일은 DB 인스턴스 삭제 시 모두 삭제되며, 수동 백업 파일은 사용자가 명시적으로 삭제하지 않는 한 백업 스토리지에 영구 저장됩니다.
 
-### 자동 백업
+### 자동 백업 Auto-Backup
 
 DB 인스턴스의 백업 보관 기간을 1일 이상으로 설정하면 자동 백업이 활성화되며, 지정된 백업 수행 시간에 자동 백업이 이루어집니다. 백업 수행 시간을 지정하지 않으면, 매일 임의의 부하가 몰리지 않는 시점에 자동 백업을 수행합니다. 백업 수행 시간을 지정하면, 지정된 시각으로부터 15분 사이에 자동 백업을 수행합니다. 자동 백업은 최대 30일까지 보관할 수 있습니다. 백업 보관 기간을 없음으로 설정하면 자동 백업이 비활성화되며, 저장된 모든 자동 백업 파일이 백업 스토리지에서 삭제됩니다. 자동 백업이 비활성화되면 백업 보관 기간 중 어느 한 시점으로 복원은 불가능하며, 수동 백업을 이용한 특정 시각으로 복원만 가능합니다.
 
-### 수동 백업
+### 수동 백업 Manual Backup
 
 자동 백업 활성화와 관련 없이 원하는 시각에 수동으로 백업을 수행할 수 있습니다. 수동 백업 생성 시 이름을 입력해야 하며, 명명 규칙은 다음과 같습니다.
 
-* 백업 이름은 리전별로 고유해야 합니다.
-* 백업 이름은 4 ~ 100 사이의 알파벳, 숫자, - _ . 만 사용 가능합니다.
-* 백업 이름의 첫 번째 문자는 글자이어야 합니다.
+* 백업 이름은 리전별로 고유해야 합니다. Must be unique for each region.
+* 백업 이름은 4 ~ 100 사이의 알파벳, 숫자, - _ . 만 사용 가능합니다. Must be comprised of alphabets, numbers, -, _ , and . only, between 4 and 100 characters. 
+* 백업 이름의 첫 번째 문자는 글자이어야 합니다. Must start with a letter. 
 
-## 복원
+## 복원 Restoration
 
-RDS for SQL Server 는 백업 파일을 이용하여 백업된 순간으로 복원을 하거나, 복원을 원하는 어느 한 시점을 선택하여 복원을 할수 있습니다. 복원을 하게 되면 기존 DB 인스턴스와 무관한, 신규 DB 인스턴스가 생성됩니다. 복원된 DB 인스턴스는 데이터베이스만 복원되므로, 파라미터 그룹과 보안 그룹을 새롭게 설정해야 합니다. 새로운 파라미터 그룹을 설정할수는 있으나, 백업할 당시의 파라미터 그룹을 사용하여 복원하는 것을 추천합니다.
+RDS for SQL Server 는 백업 파일을 이용하여 백업된 순간으로 복원을 하거나, 복원을 원하는 어느 한 시점을 선택하여 복원을 할수 있습니다. 복원을 하게 되면 기존 DB 인스턴스와 무관한, 신규 DB 인스턴스가 생성됩니다. 복원된 DB 인스턴스는 데이터베이스만 복원되므로, 파라미터 그룹과 보안 그룹을 새롭게 설정해야 합니다. 새로운 파라미터 그룹을 설정할수는 있으나, 백업할 당시의 파라미터 그룹을 사용하여 복원하는 것을 추천합니다.With RDS for SQL Server, restoration is available to a backup moment by using backup files, or to a point in time. With restoration, a new database instance is created, which is irrelevant to an existint database instance. Since restored database instance regards to database only, a new setting of parameter and security groups is required. Setting of a new parameter group is available, but it is recommended to restore with   
 
 ### 백업을 이용한 복원
 
