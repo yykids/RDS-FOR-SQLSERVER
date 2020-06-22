@@ -12,10 +12,10 @@ DB 인스턴스의 데이터베이스를 복구할 수 있도록 미리 준비�
 
 ### 백업 스토리지 Backup Storage 
 
-RDS for SQL Server 는 모든 백업 파일을 별도의 백업 스토리지에 저장합니다. 백업 스토리지는 해당 리전의 모든 DB 인스턴스 스토리지 크기의 합만큼 무료로 제공되며, 초과분에 대해서는 별도로 과금됩니다.
-자동 백업 파일은 DB 인스턴스 삭제 시 모두 삭제되며, 수동 백업 파일은 사용자가 명시적으로 삭제하지 않는 한 백업 스토리지에 영구 저장됩니다.
+RDS for SQL Server 는 모든 백업 파일을 별도의 백업 스토리지에 저장합니다. 백업 스토리지는 해당 리전의 모든 DB 인스턴스 스토리지 크기의 합만큼 무료로 제공되며, 초과분에 대해서는 별도로 과금됩니다. RDS for SQL Server helps to store all backup files to a backup storage. Backup storage is provided free of charges, as much as the sum of storage size of all database instances of a region, while the exceeding rest shall be charged.  
+Auto backup files are deleted along with database instance deletion, while manual backup files are permanently saved at a backup storage, unless specified otherwise by the user.  자동 백업 파일은 DB 인스턴스 삭제 시 모두 삭제되며, 수동 백업 파일은 사용자가 명시적으로 삭제하지 않는 한 백업 스토리지에 영구 저장됩니다.
 
-### 자동 백업 Auto-Backup
+### 자동 백업 Auto Backup
 
 DB 인스턴스의 백업 보관 기간을 1일 이상으로 설정하면 자동 백업이 활성화되며, 지정된 백업 수행 시간에 자동 백업이 이루어집니다. 백업 수행 시간을 지정하지 않으면, 매일 임의의 부하가 몰리지 않는 시점에 자동 백업을 수행합니다. 백업 수행 시간을 지정하면, 지정된 시각으로부터 15분 사이에 자동 백업을 수행합니다. 자동 백업은 최대 30일까지 보관할 수 있습니다. 백업 보관 기간을 없음으로 설정하면 자동 백업이 비활성화되며, 저장된 모든 자동 백업 파일이 백업 스토리지에서 삭제됩니다. 자동 백업이 비활성화되면 백업 보관 기간 중 어느 한 시점으로 복원은 불가능하며, 수동 백업을 이용한 특정 시각으로 복원만 가능합니다.
 
