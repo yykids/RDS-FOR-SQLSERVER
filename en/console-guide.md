@@ -2,7 +2,7 @@
 
 ## Database Instances
 
-On the Database Instance tab, you can create, modify, or delete database instances, or query status information of created database instances. DB 인스턴스 탭에서는 DB 인스턴스의 생성, 수정, 삭제 등의 작업을 하거나, 현재 생성된 DB 인스턴스의 각종 상태 정보를 조회할 수 있습니다.
+On Database Instances, you can create, modify, or delete database instances, or query status information of created database instances. DB 인스턴스 탭에서는 DB 인스턴스의 생성, 수정, 삭제 등의 작업을 하거나, 현재 생성된 DB 인스턴스의 각종 상태 정보를 조회할 수 있습니다.
 
 ### DB 인스턴스 생성 Create Database Instances 
 
@@ -69,7 +69,7 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 * ❶ Click [Change] to change name of a database instance. 버튼 클릭 시, DB 인스턴스의 이름을 변경할 수 있습니다.
 * ❷ Click [Copy] to copy ID of database instance onto clipboard. 버튼 클릭 시, DB 인스턴스의 아이디를 클립보드로 복사합니다.
-* ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다.IP information allowing the access to database instances is exposed. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
+* ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다. Shows IP information allowing the access to database instances. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
 * ❹ 적용된 DB 보안 그룹을 확인할 수 있습니다. DB 보안 그룹 이름 위에 마우스 커서를 올려놓으면, 보안 그룹 규칙을 볼 수 있습니다. Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
 
 #### 모니터링 Monitoring
@@ -86,59 +86,59 @@ Check out relevant events of a selected database instance. For more details, see
 
 #### 로그 Logs
 
-선택한 DB 인스턴스에서 발생한 Microsoft SQL Server 의 에러로그를 확인할 수 있습니다. 
-에러로그 내용을 최신 순으로 정렬하며, 한화면에 최대 10줄의 에러로그를 확인할 수 있습니다.
+선택한 DB 인스턴스에서 발생한 Microsoft SQL Server 의 에러로그를 확인할 수 있습니다. Find out error logs of Microsoft SQL Server occurred at a selected database instance. 
+에러로그 내용을 최신 순으로 정렬하며, 한화면에 최대 10줄의 에러로그를 확인할 수 있습니다. Error logs are aligned in the latest time order, with 10 lines of logs on each page. 
 
-![DB 인스턴스 상세 > 로그 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
+![DB Instance Details > Logs로그 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
 
-* ❶ 조회 기간을 선택합니다. 별도로 지정하지 않으면 최근 일주일간의 에러로그를 조회합니다.
-* ❷ 조회 기간을 기본값으로 초기화합니다.
-* ❸ 현재 목록을 갱신하거나, 10줄 이상의 에러로그가 있을 경우, 페이지 이동을 할 수 있습니다.
+* ❶ Select a period to query. Without a period specified, the recent week's error logs show. 조회 기간을 선택합니다. 별도로 지정하지 않으면 최근 일주일간의 에러로그를 조회합니다.
+* ❷ 조회 기간을 기본값으로 초기화합니다. Initialize query period as default. 
+* ❸ 현재 목록을 갱신하거나, 10줄 이상의 에러로그가 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 10 lines of error logs.
 
 #### 백업 Backups
 
-선택한 DB 인스턴스의 백업 관련 설정 정보 및 백업 파일에 대한 정보를 확인할 수 있습니다.
-한 화면에 최대 50개의 백업 목록이 노출됩니다. 
+선택한 DB 인스턴스의 백업 관련 설정 정보 및 백업 파일에 대한 정보를 확인할 수 있습니다. Check out the setting related to backup of a selected database instance and backup file information. 
+한 화면에 최대 50개의 백업 목록이 노출됩니다. One page shows up to 50 backups on the list. 
 
-![DB 인스턴스 상세 > 백업 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
+![DB Instance Details 인스턴스 상세 > Backups 백업 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
 
-* ❶ 백업 수행 시간이 노출됩니다. 백업 수행 시간을 지정하지 않았을 경우 시스템에서 지정한 시간이 노출됩니다.
-* ❷ 가장 최근 수행된 백업의 생성 시각이 노출됩니다.
-* ❸ 백업 이름으로 검색할 수 있습니다.
-* ❹ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다.
-* ❺ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다.
-* ❻ 수동 백업 파일을 생성합니다.
-* ❼ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다.
+* ❶ 백업 수행 시간이 노출됩니다. 백업 수행 시간을 지정하지 않았을 경우 시스템에서 지정한 시간이 노출됩니다. Shows backup execution time. If time is not specified, time shows as the system defines. 
+* ❷ 가장 최근 수행된 백업의 생성 시각이 노출됩니다. Shows creation time of the most recently executed backup. 
+* ❸ 백업 이름으로 검색할 수 있습니다.Search is available by the backup name. 
+* ❹ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다. Restore database instances by using selected backups. 
+* ❺ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다. Delete selected backups: only manual backups can be deleted.  
+* ❻ 수동 백업 파일을 생성합니다. Create manual backup files. 
+* ❼ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 backup files. 
 
 ## 백업Backups
 
-백업 탭에서는 모든 DB 인스턴스의 수동, 자동 백업 파일에 대한 정보를 확인할 수 있습니다.
+백업 탭에서는 모든 DB 인스턴스의 수동, 자동 백업 파일에 대한 정보를 확인할 수 있습니다. On Backups, check out information on manual or auto backup files of all database instances. 
 
-### 백업 목록 List
+### 백업 목록 List of Backups 
 
-![백업 목록 001](http://static.toastoven.net/prod_rds_mssql/backup_list_001.png)
+![List of Backups 백업 목록 001](http://static.toastoven.net/prod_rds_mssql/backup_list_001.png)
 
-* ❶ 백업 이름으로 검색할 수 있습니다.
-* ❷ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다.
-* ❸ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다.
-* ❹ 수동 백업 파일을 생성합니다.
-* ❺ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다.
+* ❶ 백업 이름으로 검색할 수 있습니다. Search is available by the backup name. 
+* ❷ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다.Restore database instance by using selected backups.
+* ❸ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다.Delete selected backups: only manual backups can be deleted. 
+* ❹ 수동 백업 파일을 생성합니다.Create manual backup files. 
+* ❺ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 backup files. 
 
 ### 백업 생성 Create
 
-백업 탭의 [백업 생성] 버튼을 클릭하면 백업을 생성하기 위한 팝업이 노출됩니다.
-DB 인스턴스를 선택하고, 이름을 입력한 후 [생성] 버튼을 클릭하면 백업이 수행됩니다.
+Click 백업 탭의 [Create Backups백업 생성] on Backups and a popup shows to create backups.  버튼을 클릭하면 백업을 생성하기 위한 팝업이 노출됩니다.
+Select a database instance, enter name and click DB 인스턴스를 선택하고, 이름을 입력한 후 [Create] to execute backup.  버튼을 클릭하면 백업이 수행됩니다.
 
-![백업 목록 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
+![List of Backups 백업 목록 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
 
-* ❶ 백업하려는 DB 인스턴스를 선택합니다. 현재 사용가능한 DB 인스턴스만 노출됩니다.
-* ❷ 백업 이름을 입력합니다.
-* 그외 자세한 사항은 [백업 및 복원](./backup-restore) 을 참고합니다.
+* ❶ 백업하려는 DB 인스턴스를 선택합니다. 현재 사용가능한 DB 인스턴스만 노출됩니다. Select a database instance to back up. Only currently available database instances show. 
+* ❷ 백업 이름을 입력합니다. Enter name of backup. 
+* For more details, see 그외 자세한 사항은 [Backup and Restoration 백업 및 복원](./backup-restore) 을 참고합니다.
 
 ## 복원 Restoration
 
-RDS for SQL Server 에서는 백업을 이용한 복원과 시점 복원을 지원합니다.
-복원에 대한 자세한 사항은 [백업 및 복원](./backup-restore) 을 참고합니다.
+RDS for SQL Server 에서는 백업을 이용한 복원과 시점 복원을 지원합니다. RDS for SQL Server supports Restoration with Backup and Point-in-time Restoration.  
+For more details, see 복원에 대한 자세한 사항은 [Backup and Restoration 백업 및 복원](./backup-restore) 을 참고합니다.
 
 ### 백업을 이용한 복원
 
