@@ -143,7 +143,7 @@ For more details, see 복원에 대한 자세한 사항은 [Backup and Restorati
 ### 백업을 이용한 복원 Restoration with Backup
 
 백업 탭 혹은 DB 인스턴스 상세 보기 패널의 백업 탭에서 백업을 이용한 복원을 할 수 있습니다. You may restore data by using backup, from the Backup tab or the backup tab of View Database Details.  
-Select a backup for restoration from the list, click 복원에 사용할 백업을 목록에서 선택 한 후, [Restore복원] and it goes to the restoration page.  버튼을 클릭하면 복원 화면으로 이동합니다.
+Select a backup for restoration from the list, click 복원에 사용할 백업을 목록에서 선택 한 후, [Restore복원], and it goes to the restoration page.  버튼을 클릭하면 복원 화면으로 이동합니다.
 
 ![Restoration 001](http://static.toastoven.net/prod_rds_mssql/restore_001.png)
 ![Restoration 002](http://static.toastoven.net/prod_rds_mssql/restore_002.png)
@@ -179,42 +179,42 @@ For more details on events and subscription, see 이벤트와 구독에 대한 �
 
 ### 최근 이벤트 목록 List of Recent Events 
 
-최근 발생한 이벤트를 확인할 수 있습니다. 한 번에 50개의 이벤트가 노출되며, 다양한 조건으로 필터링할 수 있습니다.
+최근 발생한 이벤트를 확인할 수 있습니다. 한 번에 50개의 이벤트가 노출되며, 다양한 조건으로 필터링할 수 있습니다.Check out events of recent occurrence. The 50 events that are exposed at one shot can be filtered out with many conditions.   
 
-![최근 이벤트 목록 001](http://static.toastoven.net/prod_rds_mssql/event_list_001.png)
+![List of Recent Events 최근 이벤트 목록 001](http://static.toastoven.net/prod_rds_mssql/event_list_001.png)
 
-* ❶ 노출될 이벤트 유형을 선택합니다.
-* ❷ 검색어로 검색할 대상을 선택합니다. 이벤트 소스 및 메시지로 검색할 수 있습니다.
-* ❸ 노출된 이벤트 발생 일시를 선택합니다.
-* ❹ [초기화] 버튼 클릭 시, 모든 검색 조건을 기본값으로 설정합니다.
-* ❺ 현재 목록을 갱신하거나, 50개 이상의 이벤트가 있을 경우, 페이지 이동을 할 수 있습니다.
+* ❶ 노출될 이벤트 유형을 선택합니다. Select an event type to show. 
+* ❷ 검색어로 검색할 대상을 선택합니다. 이벤트 소스 및 메시지로 검색할 수 있습니다. Select a target to be searhced with search words. Search is available with an event source or a message.  
+* ❸ 노출된 이벤트 발생 일시를 선택합니다. Select time of event occurrence. 
+* ❹ [초기화] 버튼 클릭 시, 모든 검색 조건을 기본값으로 설정합니다. With [Initialize], all search conditions are set as default. 
+* ❺ 현재 목록을 갱신하거나, 50개 이상의 이벤트가 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 events.
 
-### 이벤트 구독하기 Subscribe
+### 이벤트 구독하기 Subscribe Events 
 
-이벤트 구독 목록 상단의 [이벤트 구독 등록] 버튼을 클릭하면 이벤트를 구독할 수 있는 팝업이 노출됩니다.
-구독할 이벤트 정보를 입력 후, 팝업 하단의 [생성] 버튼을 클릭하면 이벤트를 구독할 수 있습니다.
+Click 이벤트 구독 목록 상단의 [Register Event Subscription 이벤트 구독 등록] on top of the list of event subscription, and a popup shows to subscribe events. 버튼을 클릭하면 이벤트를 구독할 수 있는 팝업이 노출됩니다.
+Enter information of an event to subsribe, click 구독할 이벤트 정보를 입력 후, 팝업 하단의 [Create 생성] at the bottom and you're subscribed to the event.  버튼을 클릭하면 이벤트를 구독할 수 있습니다.
 
-![이벤트 구독 팝업 001](http://static.toastoven.net/prod_rds_mssql/event_subscription_001.png)
+![Popup for Event Subscription 이벤트 구독 팝업 001](http://static.toastoven.net/prod_rds_mssql/event_subscription_001.png)
 
-* ❶ 이벤트 유형에 따라 이벤트 코드, 이벤트 소스를 좀더 세분화해서 선택할 수 있습니다.
-* ❷ 프로젝트의 멤버만 사용자 목록에 노출됩니다. 실명 인증을 한 멤버만 이름과 SMS 가 추가로 노출됩니다.
+* ❶ 이벤트 유형에 따라 이벤트 코드, 이벤트 소스를 좀더 세분화해서 선택할 수 있습니다. Event codes and event sources can be subdivided for each event type.   
+* ❷ 프로젝트의 멤버만 사용자 목록에 노출됩니다. 실명 인증을 한 멤버만 이름과 SMS 가 추가로 노출됩니다. Only project members are exposed on the list of users. Those whose names are authenticated only show their names and SMS, further on the page.  
 
-![이벤트 구독 팝업 002](http://static.toastoven.net/prod_rds_mssql/event_subscription_002.png)
+![Popup for Event Subscription 이벤트 구독 팝업 002](http://static.toastoven.net/prod_rds_mssql/event_subscription_002.png)
 
-* 이벤트 유형을 선택하면 해당 유형에 속하는 이벤트 코드를 선택할 수 있습니다.
+* 이벤트 유형을 선택하면 해당 유형에 속하는 이벤트 코드를 선택할 수 있습니다. Select an event type and then choose an event code within. 
 
-![이벤트 구독 팝업 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
+![Popup for Event Subscription 이벤트 구독 팝업 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
 
-* ❶ 자동 완성 입력을 지원합니다.
+* ❶ Auto-complete 자동 완성 입력을 지원합니다.
     * 입력한 키워드에 따라 선택할 수 있는 이벤트 코드가 필터링 됩니다.
     * 키보드 방향키 위, 아래 키로 이벤트 코드를 선택한 후 엔터를 누르면 자동완성됩니다.
     * 이미 추가된 이벤트 코드는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
 * ❷ 마우스로 이벤트 코드를 선택할 수 있습니다.
 
-![이벤트 구독 팝업 004](http://static.toastoven.net/prod_rds_mssql/event_subscription_004.png)
+![Popup for Event Subscription 004](http://static.toastoven.net/prod_rds_mssql/event_subscription_004.png)
 
-* 이벤트 유형에 따른 이벤트 소스가 노출됩니다.
-* ❶ 자동 완성 입력을 지원합니다.
+* 이벤트 유형에 따른 이벤트 소스가 노출됩니다. Shows event source for each event type. 
+* ❶ 자동 완성 입력을 지원합니다. Supports auto-complete 
     * 입력한 키워드에 따라 선택할 수 있는 이벤트 소스가 필터링 됩니다.
     * 키보드 방향키 위, 아래 키로 이벤트 소스를 선택한 후 엔터를 누르면 자동완성됩니다.
     * 이미 추가된 이벤트 소스는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
@@ -269,10 +269,10 @@ For more details on events and subscription, see 이벤트와 구독에 대한 �
 
 ![파라미터 그룹 비교 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_diff_001.png)
 
-## DB 보안 그룹 Security Groups
+## DB 보안 그룹 Database Security Groups
 
-DB 보안 그룹 탭에서는 DB 보안 그룹의 생성 및 삭제가 가능합니다. 또한 DB 보안 그룹에 정책을 추가, 수정, 삭제할 수 있습니다.
-DB 보안 그룹에 대한 자세한 설명은 [데이터베이스 접속](./database-connection) 을 참고합니다.
+From the Database Security Groups tab, database security group can be created or deleted. It is also possible to add, modify, or delete policy for each group.    보안 그룹 탭에서는 DB 보안 그룹의 생성 및 삭제가 가능합니다. 또한 DB 보안 그룹에 정책을 추가, 수정, 삭제할 수 있습니다.
+For more details on database security groups, see DB 보안 그룹에 대한 자세한 설명은 [Database Access](./database-connection).
 
 ### DB 보안 그룹 생성 Create
 
