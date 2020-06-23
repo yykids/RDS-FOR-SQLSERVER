@@ -69,20 +69,20 @@ DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출�
 
 * ❶ Click [Change] to change name of a database instance. 버튼 클릭 시, DB 인스턴스의 이름을 변경할 수 있습니다.
 * ❷ Click [Copy] to copy ID of database instance onto clipboard. 버튼 클릭 시, DB 인스턴스의 아이디를 클립보드로 복사합니다.
-* ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다.
-* ❹ 적용된 DB 보안 그룹을 확인할 수 있습니다. DB 보안 그룹 이름 위에 마우스 커서를 올려놓으면, 보안 그룹 규칙을 볼 수 있습니다.
+* ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다.IP information allowing the access to database instances is exposed. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
+* ❹ 적용된 DB 보안 그룹을 확인할 수 있습니다. DB 보안 그룹 이름 위에 마우스 커서를 올려놓으면, 보안 그룹 규칙을 볼 수 있습니다. Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
 
 #### 모니터링 Monitoring
 
-선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. For more detail usage, see자세한 사용법은 [Server Dashboard](./console-guide#_17) 를 참고합니다.
+선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. For more detail usage, see자세한 사용법은 [Server Dashboard](./console-guide#_17) 를 참고합니다. Find out relevant indicators of a selected database instance on a chart. 
 
 ![Database Instance Details인스턴스 상세 > Monitoring 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
 #### 이벤트 Events
 
-선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [이벤트](./console-guide#_9) 를 참고합니다.
+Check out relevant events of a selected database instance. For more details, see 선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [Events](./console-guide#_9) 를 참고합니다.
 
-![DB 인스턴스 상세 > 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
+![DB Instance Details 인스턴스 상세 > Events 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 
 #### 로그 Logs
 
