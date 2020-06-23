@@ -2,7 +2,7 @@
 
 ## Database Instances
 
-On Database Instances, you can create, modify, or delete database instances, or query status information of created database instances. DB 인스턴스 탭에서는 DB 인스턴스의 생성, 수정, 삭제 등의 작업을 하거나, 현재 생성된 DB 인스턴스의 각종 상태 정보를 조회할 수 있습니다.
+On Database Instances, you can create, modify, or delete database instances, or query status information of created database instances. 
 
 ### DB 인스턴스 생성 Create Database Instances 
 
@@ -15,9 +15,9 @@ DB 인스턴스를 생성하려면 먼저 DB 인스턴스 리스트 화면 좌�
 * ❷ When a database security group is not available, click DB 보안 그룹이 없을 경우, [Creae Database Security Groups] to immediately create and apply a security group. 버튼을 클릭하여 즉시 생성, 적용할 수 있습니다.
 * For more details, see그외 자세한 사항은 [Database Instances 인스턴스](./db-instance) 와 [Database Access 데이터베이스 접속](./database-connection) 을 참고합니다.
 
-With a database instance successfully created, you're automatically moved to the list of database instances. It takes a few minutes up to a few dozens of minutes to create a database instance. DB 인스턴스 생성 요청에 성공하면, 자동으로 DB 인스턴스 리스트로 이동합니다. DB 인스턴스 생성에는 몇 분에서 몇십 분이 소요됩니다.
+With a database instance successfully created, you're automatically moved to the list of database instances. It takes a few minutes, up to a few dozens of minutes, to create a database instance. DB 인스턴스 생성 요청에 성공하면, 자동으로 DB 인스턴스 리스트로 이동합니다. DB 인스턴스 생성에는 몇 분에서 몇십 분이 소요됩니다.
 
-### DB 인스턴스 목록 List 
+### DB 인스턴스 목록 List of Database Instances
 
 DB 인스턴스의 간략한 정보 목록을 조회할 수 있습니다. Brief information of database instances can be listed. 
 한 화면에 최대 50개의 DB 인스턴스 목록이 노출됩니다. One page shows up to 50 database instances on the list. 
@@ -34,7 +34,7 @@ DB 인스턴스의 간략한 정보 목록을 조회할 수 있습니다. Brief 
 * ❺ 현재 CPU 사용량과 활성 세션 개수를 나타냅니다. 해당 값은 매 1분마다 갱신됩니다. Refers to the current CPU usage volume and the number of active sessions. 
 * ❻ DB 인스턴스의 상태를 나타냅니다. 상태에 따라 서로 다른 상태 값 및 색상이 노출됩니다. DB 인스턴스가 작업 중이면 스피너가 노출됩니다. Refers to the status of database instance. Each status shows different value and color of status. 
 
-### DB 인스턴스 수정 Modify
+### DB 인스턴스 수정 Modify Database Instances
 
 사용 가능 상태의 DB 인스턴스는 웹콘솔을 통해 손쉽게 주요 설정을 변경할 수 있습니다.Available database instances can be easily modified in the setting via web console. 
 
@@ -140,42 +140,42 @@ Select a database instance, enter name and click DB 인스턴스를 선택하고
 RDS for SQL Server 에서는 백업을 이용한 복원과 시점 복원을 지원합니다. RDS for SQL Server supports Restoration with Backup and Point-in-time Restoration.  
 For more details, see 복원에 대한 자세한 사항은 [Backup and Restoration 백업 및 복원](./backup-restore) 을 참고합니다.
 
-### 백업을 이용한 복원
+### 백업을 이용한 복원 Restoration with Backup
 
-백업 탭 혹은 DB 인스턴스 상세 보기 패널의 백업 탭에서 백업을 이용한 복원을 할 수 있습니다.
-복원에 사용할 백업을 목록에서 선택 한 후, [복원] 버튼을 클릭하면 복원 화면으로 이동합니다.
+백업 탭 혹은 DB 인스턴스 상세 보기 패널의 백업 탭에서 백업을 이용한 복원을 할 수 있습니다. You may restore data by using backup, from the Backup tab or the backup tab of View Database Details.  
+Select a backup for restoration from the list, click 복원에 사용할 백업을 목록에서 선택 한 후, [Restore복원] and it goes to the restoration page.  버튼을 클릭하면 복원 화면으로 이동합니다.
 
-![복원 001](http://static.toastoven.net/prod_rds_mssql/restore_001.png)
-![복원 002](http://static.toastoven.net/prod_rds_mssql/restore_002.png)
+![Restoration 001](http://static.toastoven.net/prod_rds_mssql/restore_001.png)
+![Restoration 002](http://static.toastoven.net/prod_rds_mssql/restore_002.png)
+
+Select type of a newly created database instance and set up, and press 복원 화면에서 신규로 생성되는 DB 인스턴스의 타입 및 각종 설정을 한 후, 화면 하단의 [Restore Database Instances B 인스턴스 복원] at the bottom to restore the database instance. 버튼을 눌러 DB 인스턴스를 복원합니다.
+
+![Restoration 003](http://static.toastoven.net/prod_rds_mssql/restore_003.png)
+
+It takes a few minutes, up to dozens of minutes, to restore a database instance.  DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다.
+
+### 백업 보관 기간 중 어느 한 시점으로 복원 Point-in-time Restoration
+
+DB 인스턴스의 백업 보관 주기가 1일 이상이면 백업 보관 기간 중 어느 한 시점으로 복원할 수 있습니다. When the backup retention cycle is more than a day, database instances can be restored to a point in time during such retention period. 
+Select a database instance to restore, click 시점 복원할 DB 인스턴스를 선택한 후, [Point-in-time Restoration 시점 복원] and it goes to the restoration page. 버튼을 클릭하면 복원 화면으로 이동합니다.
+
+![Restoration 004](http://static.toastoven.net/prod_rds_mssql/restore_004.png)
+
+Provided on the same page for Restoration with Backup, you can select a time to restore on top of the page. 백업을 이용한 복원과 동일한 화면이지만, 화면 상단에서 복원할 시점을 선택할 수 있습니다.
+
+![Restoration 005](http://static.toastoven.net/prod_rds_mssql/restore_005.png)
+
+To restore to a different point in time other than recent available time, select 최근 복원 가능 시각 이외에 다른 시점으로 복원 하려면 [User Specified사용자 지정] 을 선택합니다.
+
+![Restoration 006](http://static.toastoven.net/prod_rds_mssql/restore_006.png)
 
 복원 화면에서 신규로 생성되는 DB 인스턴스의 타입 및 각종 설정을 한 후, 화면 하단의 [DB 인스턴스 복원] 버튼을 눌러 DB 인스턴스를 복원합니다.
-
-![복원 003](http://static.toastoven.net/prod_rds_mssql/restore_003.png)
-
-DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다.
-
-### 백업 보관 기간 중 어느 한 시점으로 복원
-
-DB 인스턴스의 백업 보관 주기가 1일 이상이면 백업 보관 기간 중 어느 한 시점으로 복원할 수 있습니다.
-시점 복원할 DB 인스턴스를 선택한 후, [시점 복원] 버튼을 클릭하면 복원 화면으로 이동합니다.
-
-![복원 004](http://static.toastoven.net/prod_rds_mssql/restore_004.png)
-
-백업을 이용한 복원과 동일한 화면이지만, 화면 상단에서 복원할 시점을 선택할 수 있습니다.
-
-![복원 005](http://static.toastoven.net/prod_rds_mssql/restore_005.png)
-
-최근 복원 가능 시각 이외에 다른 시점으로 복원 하려면 [사용자 지정] 을 선택합니다.
-
-![복원 006](http://static.toastoven.net/prod_rds_mssql/restore_006.png)
-
-복원 화면에서 신규로 생성되는 DB 인스턴스의 타입 및 각종 설정을 한 후, 화면 하단의 [DB 인스턴스 복원] 버튼을 눌러 DB 인스턴스를 복원합니다.
-DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다.
+DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다. Select type of a newly created database instance and set up, and press [Restore Database Instances  인스턴스 복원]at the bottom to restore the database instance. 
 
 ## 이벤트 Events 
 
-이벤트 탭에서는 최근 발생한 이벤트를 확인하거나, 이벤트 구독에 관한 설정을 할 수 있습니다.
-이벤트와 구독에 대한 자세한 설명은 [모니터링](./monitoring#_2) 을 참고합니다.
+이벤트 탭에서는 최근 발생한 이벤트를 확인하거나, 이벤트 구독에 관한 설정을 할 수 있습니다. On the Events tab, check out recent events or set up for event subscription. 
+For more details on events and subscription, see 이벤트와 구독에 대한 자세한 설명은 [Monitoring 모니터링](./monitoring#_2) 을 참고합니다.
 
 ### 최근 이벤트 목록 List of Recent Events 
 
@@ -311,7 +311,7 @@ DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 
 RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
 기본 레이아웃은 삭제 및 변경이 불가능합니다.
 
-![서버 대시보드 001](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_001.png)
+![Server Dashboard 001](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_001.png)
 
 * ❶ 생성된 DB 인스턴스가 목록에 노출됩니다. DB 인스턴스 선택 시, 연관된 차트를 확인할 수 있습니다.
 * ❷ 레이아웃을 변경하여, 새로운 지표를 확인할 수 있습니다.
