@@ -4,296 +4,294 @@
 
 On Database Instances, you can create, modify, or delete database instances, or query status information of created database instances. 
 
-### DB 인스턴스 생성 Create Database Instances 
+### Creating Database Instances 
 
-DB 인스턴스를 생성하려면 먼저 DB 인스턴스 리스트 화면 좌측 상단의 [DB 인스턴스 생성] 버튼을 클릭하여 DB 인스턴스 생성 화면으로 이동합니다.
-생성하고자 하는 DB 인스턴스의 사양, 정보, 네트워크, 플로팅 IP, DB 보안 그룹, 백업 설정을 입력한 후 [DB 인스턴스 생성] 버튼을 클릭하여 DB 인스턴스 생성 요청을 합니다. To crete a database instance, click [Create Database Instances인스턴스 생성] on top left of the list and go to page for database instance creation. Enter specifications, network, floating IP, database security group, and backup settings for the instance, click [Create Database Instances 인스턴스 생성] and send a request for creation.   
+To crete a database instance, click [Create Database Instances] on top left of the list and go to page for database instance creation. Enter specifications, network, floating IP, database security group, and backup settings for the instance, click [Create Database Instances] and send a request for creation.   
 
-![Create Database Instances  인스턴스 생성 001](http://static.toastoven.net/prod_rds_mssql/db_instance_create_001.png)
+![Create Database Instances 001](http://static.toastoven.net/prod_rds_mssql/db_instance_create_001.png)
 
-* ❶ From Compute & Network, select a created VPC subnet. 서비스에서 생성한 VPC 서브넷을 선택할 수 있습니다.
-* ❷ When a database security group is not available, click DB 보안 그룹이 없을 경우, [Creae Database Security Groups] to immediately create and apply a security group. 버튼을 클릭하여 즉시 생성, 적용할 수 있습니다.
-* For more details, see그외 자세한 사항은 [Database Instances 인스턴스](./db-instance) 와 [Database Access 데이터베이스 접속](./database-connection) 을 참고합니다.
+* ❶ From Compute & Network, select a created VPC subnet. 
+* ❷ When a database security group is not available, click [Create Database Security Groups] to immediately create and apply a security group. 
+* For more details, see [Database Instances](./db-instance) and [Database Access](./database-connection).
 
-With a database instance successfully created, you're automatically moved to the list of database instances. It takes a few minutes, up to a few dozens of minutes, to create a database instance. DB 인스턴스 생성 요청에 성공하면, 자동으로 DB 인스턴스 리스트로 이동합니다. DB 인스턴스 생성에는 몇 분에서 몇십 분이 소요됩니다.
+With a database instance successfully created, you're automatically moved to the list of database instances. It takes a few minutes, or up to a few dozens of minutes, to create a database instance. 
 
-### DB 인스턴스 목록 List of Database Instances
+### List of Database Instances
 
-DB 인스턴스의 간략한 정보 목록을 조회할 수 있습니다. Brief information of database instances can be listed. 
-한 화면에 최대 50개의 DB 인스턴스 목록이 노출됩니다. One page shows up to 50 database instances on the list. 
+Brief information of database instances can be listed. 
+One page shows up to 50 database instances on the list. 
 
-![List of Database Instances 인스턴스 목록 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_001.png)
+![List of Database Instances 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_001.png)
 
-* ❶ DB 인스턴스 이름 및 UUID 로 검색할 수 있습니다. Search is available by name or UUID of database instances. 
-* ❷ 조건 버튼 클릭 시, 가용성 영역과 DB 인스턴스 상태로 검색 결과를 필터링할 수 있습니다. With a click on the condition, search results can be filtered by availability area or database instance status. 
+* ❶ Search is available by the name or UUID of a database instance. 
+* ❷ With a click on the condition, search results can be filtered by availability area or database instance status. 
 
-![List of Database Instances 인스턴스 리스트 > Conditions조건 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_cond_001.png)
+![List of Database Instances > Conditions 001](http://static.toastoven.net/prod_rds_mssql/db_instance_list_cond_001.png)
 
-* ❸ DB 인스턴스 선택 시, DB 인스턴스 상태에 따라 활성화됩니다. When selected, database instances may be enabled depending on the status. 
-* ❹ 현재 목록을 갱신하거나, 50개 이상의 DB 인스턴스가 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 database instances.
-* ❺ 현재 CPU 사용량과 활성 세션 개수를 나타냅니다. 해당 값은 매 1분마다 갱신됩니다. Refers to the current CPU usage volume and the number of active sessions. 
-* ❻ DB 인스턴스의 상태를 나타냅니다. 상태에 따라 서로 다른 상태 값 및 색상이 노출됩니다. DB 인스턴스가 작업 중이면 스피너가 노출됩니다. Refers to the status of database instance. Each status shows different value and color of status. 
+* ❸ When selected, database instances may be enabled depending on the status. 
+* ❹ Pagination is available when the current list is updated or if there are more than 50 database instances.
+* ❺ Refers to the current CPU usage volume and the number of active sessions. 
+* ❻ Refers to the status of database instance. Each status shows different value and color of status. 
 
-### DB 인스턴스 수정 Modify Database Instances
+### Modifying Database Instances
 
-사용 가능 상태의 DB 인스턴스는 웹콘솔을 통해 손쉽게 주요 설정을 변경할 수 있습니다.Available database instances can be easily modified in the setting via web console. 
+Available database instances can be easily modified in the setting via web console. 
 
-![List of Database Instances B 인스턴스 리스트 002](http://static.toastoven.net/prod_rds_mssql/db_instance_list_002.png)
+![List of Database Instances 002](http://static.toastoven.net/prod_rds_mssql/db_instance_list_002.png)
 
-* ❶ Select a database instance to modify from the list and click Modify on top right. 수정하고자 하는 DB 인스턴스를 목록에서 선택 후, 우측 상단의 수정 버튼을 클릭합니다.
+* ❶ Select a database instance to modify from the list and click Modify on top right. 
 
-After setting is changed, click 변경하고자 하는 설정을 변경 후, 페이지 하단의 [Modify] at the bottom of the page to modify database instance.  버튼을 클릭하여 DB 인스턴스를 수정합니다.
-Once request for modifying database instance is successfully made, you're moved to the list of database instances. It takes a few minutes up to a dozens of minutes to modify a database instance.  DB 인스턴스 수정 요청에 성공하면, 자동으로 DB 인스턴스 리스트로 이동합니다. DB 인스턴스 수정에는 몇 분에서 몇십 분이 소요됩니다.
+After setting is changed, click [Modify] at the bottom of the page to modify database instance.  
+Once request for modifying database instance is successfully made, you're moved to the list of database instances. It takes a few minutes, or up to a few dozens of minutes, to modify a database instance.  
 
 ![Modify Database Instances 001](http://static.toastoven.net/prod_rds_mssql/db_instance_modify_001.png)
 
-* ❶ 가용성 영역은 변경할 수 업습니다.Unable to change the availability area. 
-* ❷ DB 인스턴스 타입 변경 시, 데이터베이스가 재시작됩니다. With the change of database instance type, database shall restart.  
-* ❸ 스토리지 타입은 변경할 수 업습니다.Unable to change storage type. 
-* ❹ 한번 증가시킨 스토리지 크기는 다시 줄일 수 없습니다. Unable to reduce storage size, once it is increased. 
-* ❺ 사용자 ID 는 변경할 수 없습니다. Unable to change user ID.
-* ❻ 비밀번호를 입력하지 않으면, 변경되지 않습니다. Without password, change is unavailable. 
-* ❼ 포트 변경 시, 데이터베이스가 재시작됩니다. With the change of port, database shall restart. 
-* ❽ VPC 는 변경할 수 없습니다. Unable to change VPC. 
+* ❶ Unable to change the availability area. 
+* ❷ With the change of database instance type, database shall restart.  
+* ❸ Unable to change storage type. 
+* ❹ Unable to reduce storage size, once it is increased. 
+* ❺ Unable to change user ID.
+* ❻ Without password, change is unavailable. 
+* ❼ With the change of port, database shall restart. 
+* ❽ Unable to change VPC. 
 
-### DB 인스턴스 상세 Database Instance Details 
+### Database Instance Details 
 
-DB 인스턴스를 선택하면 화면 하단에 상세 보기 패널이 노출되어, 좀 더 상세한 정보를 확인할 수 있습니다. Select a database instance to show View Details at the bottom of page for detail information. 
-상세 보기 패널은 5가지 탭으로 구성되어 있으며, DB 인스턴스와 연관된 추가 정보를 확인할 수 있습니다. The View Details is comprised of the five tabs, providing more data related to a database instace. 
+Select a database instance to show View Details at the bottom of page for detail information. 
+The View Details panel is comprised of five tabs, providing more data related to each database instance. 
 
-#### 기본 정보 Basic Information 
+#### Basic Information 
 
-선택한 DB 인스턴스의 기본정보를 확인할 수 있습니다. You may check basic information of a selected database instance. 
+You may check basic information of a selected database instance. 
 
-![DB Instance Details 인스턴스 상세 > Basic Information기본 정보 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_inst_001.png)
+![DB Instance Details > Basic Information 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_inst_001.png)
 
-* ❶ Click [Change] to change name of a database instance. 버튼 클릭 시, DB 인스턴스의 이름을 변경할 수 있습니다.
-* ❷ Click [Copy] to copy ID of database instance onto clipboard. 버튼 클릭 시, DB 인스턴스의 아이디를 클립보드로 복사합니다.
-* ❸ DB 인스턴스에 접속할 수 있는 아이피 정보가 노출됩니다. 플로팅 IP 사용 시, 133 으로 시작하는 아이피가 추가로 노출되며, DB 보안 그룹 설정에 따라 외부에서 접속할 수 있습니다. Shows IP information allowing the access to database instances. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
-* ❹ 적용된 DB 보안 그룹을 확인할 수 있습니다. DB 보안 그룹 이름 위에 마우스 커서를 올려놓으면, 보안 그룹 규칙을 볼 수 있습니다. Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
+* ❶ Click [Change] to change name of a database instance. 
+* ❷ Click [Copy] to copy ID of database instance onto clipboard. 
+* ❸ Shows IP information allowing the access to database instances. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
+* ❹ Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
 
-#### 모니터링 Monitoring
+#### Monitoring
 
-선택한 DB 인스턴스와 연관된 지표를 차트를 통해 확인할 수 있습니다. For more detail usage, see자세한 사용법은 [Server Dashboard](./console-guide#_17) 를 참고합니다. Find out relevant indicators of a selected database instance on a chart. 
+Find out relevant indicators of a selected database instance on a chart. For more detail usage, see [Server Dashboard](./console-guide#_17). 
 
-![Database Instance Details인스턴스 상세 > Monitoring 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
+![Database Instance Details > Monitoring 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
-#### 이벤트 Events
+#### Events
 
-Check out relevant events of a selected database instance. For more details, see 선택한 DB 인스턴스와 연관된 이벤트를 확인할 수 있습니다. 자세한 사용법은 [Events](./console-guide#_9) 를 참고합니다.
+Check out relevant events of a selected database instance. For more details, see [Events](./console-guide#_9).
 
-![DB Instance Details 인스턴스 상세 > Events 이벤트 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
+![DB Instance Details > Events 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 
-#### 로그 Logs
+#### Logs
 
-선택한 DB 인스턴스에서 발생한 Microsoft SQL Server 의 에러로그를 확인할 수 있습니다. Find out error logs of Microsoft SQL Server occurred at a selected database instance. 
-에러로그 내용을 최신 순으로 정렬하며, 한화면에 최대 10줄의 에러로그를 확인할 수 있습니다. Error logs are aligned in the latest time order, with 10 lines of logs on each page. 
+Find out error logs of Microsoft SQL Server occurred at a selected database instance. 
+Error logs are aligned in the latest time order, with 10 lines of logs on each page. 
 
-![DB Instance Details > Logs로그 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
+![DB Instance Details > Logs 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_log_001.png)
 
-* ❶ Select a period to query. Without a period specified, the recent week's error logs show. 조회 기간을 선택합니다. 별도로 지정하지 않으면 최근 일주일간의 에러로그를 조회합니다.
-* ❷ 조회 기간을 기본값으로 초기화합니다. Initialize query period as default. 
-* ❸ 현재 목록을 갱신하거나, 10줄 이상의 에러로그가 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 10 lines of error logs.
+* ❶ Select a period to query. Without a period specified, the recent week's error logs show. 
+* ❷ Initialize query period as default. 
+* ❸ Pagination is available when the current list is updated or if there are more than 10 lines of error logs.
 
-#### 백업 Backups
+#### Backups
 
-선택한 DB 인스턴스의 백업 관련 설정 정보 및 백업 파일에 대한 정보를 확인할 수 있습니다. Check out the setting related to backup of a selected database instance and backup file information. 
-한 화면에 최대 50개의 백업 목록이 노출됩니다. One page shows up to 50 backups on the list. 
+Check out the setting related to backup of a selected database instance and backup file information. 
+One page shows up to 50 backups on the list. 
 
-![DB Instance Details 인스턴스 상세 > Backups 백업 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
+![DB Instance Details > Backups 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_backup_001.png)
 
-* ❶ 백업 수행 시간이 노출됩니다. 백업 수행 시간을 지정하지 않았을 경우 시스템에서 지정한 시간이 노출됩니다. Shows backup execution time. If time is not specified, time shows as the system defines. 
-* ❷ 가장 최근 수행된 백업의 생성 시각이 노출됩니다. Shows creation time of the most recently executed backup. 
-* ❸ 백업 이름으로 검색할 수 있습니다.Search is available by the backup name. 
-* ❹ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다. Restore database instances by using selected backups. 
-* ❺ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다. Delete selected backups: only manual backups can be deleted.  
-* ❻ 수동 백업 파일을 생성합니다. Create manual backup files. 
-* ❼ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 backup files. 
+* ❶ Shows backup execution time. If time is not specified, time shows as the system defines. 
+* ❷ Shows creation time of the most recently executed backup. 
+* ❸ Search is available by the backup name. 
+* ❹ Restore database instances by using selected backups. 
+* ❺ Delete selected backups: only manual backups can be deleted.  
+* ❻ Create manual backup files. 
+* ❼ Pagination is available when the current list is updated or if there are more than 50 backup files. 
 
-## 백업Backups
+## Backups
 
-백업 탭에서는 모든 DB 인스턴스의 수동, 자동 백업 파일에 대한 정보를 확인할 수 있습니다. On Backups, check out information on manual or auto backup files of all database instances. 
+On Backups, check out information on manual or auto backup files of all database instances. 
 
-### 백업 목록 List of Backups 
+### List of Backups 
 
-![List of Backups 백업 목록 001](http://static.toastoven.net/prod_rds_mssql/backup_list_001.png)
+![List of Backups 001](http://static.toastoven.net/prod_rds_mssql/backup_list_001.png)
 
-* ❶ 백업 이름으로 검색할 수 있습니다. Search is available by the backup name. 
-* ❷ 선택된 백업을 이용하여 DB 인스턴스를 복원합니다.Restore database instance by using selected backups.
-* ❸ 선택된 백업을 삭제합니다. 수동 백업만 삭제할 수 있습니다.Delete selected backups: only manual backups can be deleted. 
-* ❹ 수동 백업 파일을 생성합니다.Create manual backup files. 
-* ❺ 현재 목록을 갱신하거나, 50개 이상의 백업 파일이 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 backup files. 
+* ❶ Search is available by the backup name. 
+* ❷ Restore database instances by using selected backups.
+* ❸ Delete selected backups: only manual backups can be deleted. 
+* ❹ Create manual backup files. 
+* ❺ Pagination is available when the current list is updated or if there are more than 50 backup files. 
 
-### 백업 생성 Create
+### Creating Backups
 
-Click 백업 탭의 [Create Backups백업 생성] on Backups and a popup shows to create backups.  버튼을 클릭하면 백업을 생성하기 위한 팝업이 노출됩니다.
-Select a database instance, enter name and click DB 인스턴스를 선택하고, 이름을 입력한 후 [Create] to execute backup.  버튼을 클릭하면 백업이 수행됩니다.
+Click [Create Backups] on Backups and a popup shows to create a backup.
+Select a database instance, enter name and click [Create] to execute backup.  
 
-![List of Backups 백업 목록 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
+![List of Backups 002](http://static.toastoven.net/prod_rds_mssql/backup_list_002.png)
 
-* ❶ 백업하려는 DB 인스턴스를 선택합니다. 현재 사용가능한 DB 인스턴스만 노출됩니다. Select a database instance to back up. Only currently available database instances show. 
-* ❷ 백업 이름을 입력합니다. Enter name of backup. 
-* For more details, see 그외 자세한 사항은 [Backup and Restoration 백업 및 복원](./backup-restore) 을 참고합니다.
+* ❶ Select a database instance to back up. Only currently available database instances show. 
+* ❷ Enter name of a backup. 
+* For more details, see [Backup and Restoration](./backup-restore).
 
-## 복원 Restoration
+## Restoration
 
-RDS for SQL Server 에서는 백업을 이용한 복원과 시점 복원을 지원합니다. RDS for SQL Server supports Restoration with Backup and Point-in-time Restoration.  
-For more details, see 복원에 대한 자세한 사항은 [Backup and Restoration 백업 및 복원](./backup-restore) 을 참고합니다.
+RDS for SQL Server supports Restoration with Backup and Point-in-time Restoration.  
+For more details, see [Backup and Restoration](./backup-restore).
 
-### 백업을 이용한 복원 Restoration with Backup
+### Restoration with Backup
 
-백업 탭 혹은 DB 인스턴스 상세 보기 패널의 백업 탭에서 백업을 이용한 복원을 할 수 있습니다. You may restore data by using backup, from the Backup tab or the backup tab of View Database Details.  
-Select a backup for restoration from the list, click 복원에 사용할 백업을 목록에서 선택 한 후, [Restore복원], and it goes to the restoration page.  버튼을 클릭하면 복원 화면으로 이동합니다.
+You may restore data by using backup, from the Backup tab or the backup tab of View Database Details.  
+Select a backup for restoration from the list, click [Restore], and it goes to the restoration page.  
 
 ![Restoration 001](http://static.toastoven.net/prod_rds_mssql/restore_001.png)
 ![Restoration 002](http://static.toastoven.net/prod_rds_mssql/restore_002.png)
 
-Select type of a newly created database instance and set up, and press 복원 화면에서 신규로 생성되는 DB 인스턴스의 타입 및 각종 설정을 한 후, 화면 하단의 [Restore Database Instances B 인스턴스 복원] at the bottom to restore the database instance. 버튼을 눌러 DB 인스턴스를 복원합니다.
+Select type of a newly created database instance and set up, and press [Restore Database Instances] at the bottom to restore the database instance. 
 
 ![Restoration 003](http://static.toastoven.net/prod_rds_mssql/restore_003.png)
 
-It takes a few minutes, up to dozens of minutes, to restore a database instance.  DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다.
+It takes a few minutes, or up to a few dozens of minutes, to restore a database instance.  
 
-### 백업 보관 기간 중 어느 한 시점으로 복원 Point-in-time Restoration
+### Point-in-time Restoration
 
-DB 인스턴스의 백업 보관 주기가 1일 이상이면 백업 보관 기간 중 어느 한 시점으로 복원할 수 있습니다. When the backup retention cycle is more than a day, database instances can be restored to a point in time during such retention period. 
-Select a database instance to restore, click 시점 복원할 DB 인스턴스를 선택한 후, [Point-in-time Restoration 시점 복원] and it goes to the restoration page. 버튼을 클릭하면 복원 화면으로 이동합니다.
+When the backup retention cycle is more than a day, database instances can be restored to a point in time during such retention period. 
+Select a database instance to restore, click [Point-in-time Restoration] and it goes to the restoration page. 
 
 ![Restoration 004](http://static.toastoven.net/prod_rds_mssql/restore_004.png)
 
-Provided on the same page for Restoration with Backup, you can select a time to restore on top of the page. 백업을 이용한 복원과 동일한 화면이지만, 화면 상단에서 복원할 시점을 선택할 수 있습니다.
+Provided on the same page for Restoration with Backup, you can select a time to restore on top of the page. 
 
 ![Restoration 005](http://static.toastoven.net/prod_rds_mssql/restore_005.png)
 
-To restore to a different point in time other than recent available time, select 최근 복원 가능 시각 이외에 다른 시점으로 복원 하려면 [User Specified사용자 지정] 을 선택합니다.
+To restore to a different point in time other than recent available time, select [User Specified].
 
 ![Restoration 006](http://static.toastoven.net/prod_rds_mssql/restore_006.png)
 
-복원 화면에서 신규로 생성되는 DB 인스턴스의 타입 및 각종 설정을 한 후, 화면 하단의 [DB 인스턴스 복원] 버튼을 눌러 DB 인스턴스를 복원합니다.
-DB 인스턴스 복원에는 몇 분에서 몇십 분이 소요됩니다. Select type of a newly created database instance and set up, and press [Restore Database Instances  인스턴스 복원]at the bottom to restore the database instance. 
+Select type of a newly created database instance and set up, and press [Restore Database Instances]at the bottom to restore the database instance. It takes a few minutes, or up to a few dozens of minutes to restore a database instance. 
 
-## 이벤트 Events 
+## Events 
 
-이벤트 탭에서는 최근 발생한 이벤트를 확인하거나, 이벤트 구독에 관한 설정을 할 수 있습니다. On the Events tab, check out recent events or set up for event subscription. 
-For more details on events and subscription, see 이벤트와 구독에 대한 자세한 설명은 [Monitoring 모니터링](./monitoring#_2) 을 참고합니다.
+On the Events tab, check out recent events or set up for event subscription. 
+For more details on events and subscription, see [Monitoring](./monitoring#_2).
 
-### 최근 이벤트 목록 List of Recent Events 
+### List of Recent Events 
 
-최근 발생한 이벤트를 확인할 수 있습니다. 한 번에 50개의 이벤트가 노출되며, 다양한 조건으로 필터링할 수 있습니다.Check out events of recent occurrence. The 50 events that are exposed at one shot can be filtered out with many conditions.   
+Check out events of recent occurrence. The 50 events that are exposed at one shot can be filtered out with many conditions.   
 
-![List of Recent Events 최근 이벤트 목록 001](http://static.toastoven.net/prod_rds_mssql/event_list_001.png)
+![List of Recent Events 001](http://static.toastoven.net/prod_rds_mssql/event_list_001.png)
 
-* ❶ 노출될 이벤트 유형을 선택합니다. Select an event type to show. 
-* ❷ 검색어로 검색할 대상을 선택합니다. 이벤트 소스 및 메시지로 검색할 수 있습니다. Select a target to be searhced with search words. Search is available with an event source or a message.  
-* ❸ 노출된 이벤트 발생 일시를 선택합니다. Select time of event occurrence. 
-* ❹ [초기화] 버튼 클릭 시, 모든 검색 조건을 기본값으로 설정합니다. With [Initialize], all search conditions are set as default. 
-* ❺ 현재 목록을 갱신하거나, 50개 이상의 이벤트가 있을 경우, 페이지 이동을 할 수 있습니다. Pagination is available when the current list is updated or if there are more than 50 events.
+* ❶ Select an event type to show. 
+* ❷ Select a target to be searched with search words. Search is available with an event source or a message.  
+* ❸ Select time of event occurrence. 
+* ❹ With [Initialize], all search conditions are set as default. 
+* ❺ Pagination is available when the current list is updated or if there are more than 50 events.
 
-### 이벤트 구독하기 Subscribe Events 
+### Subscribing Events 
 
-Click 이벤트 구독 목록 상단의 [Register Event Subscription 이벤트 구독 등록] on top of the list of event subscription, and a popup shows to subscribe events. 버튼을 클릭하면 이벤트를 구독할 수 있는 팝업이 노출됩니다.
-Enter information of an event to subsribe, click 구독할 이벤트 정보를 입력 후, 팝업 하단의 [Create 생성] at the bottom and you're subscribed to the event.  버튼을 클릭하면 이벤트를 구독할 수 있습니다.
+Click [Register Event Subscription] on top of the list of event subscription, and a popup shows to subscribe an events.
+Enter information of an event to subsribe, click [Create] at the bottom and you're subscribed to the event.  
 
-![Popup for Event Subscription 이벤트 구독 팝업 001](http://static.toastoven.net/prod_rds_mssql/event_subscription_001.png)
+![Popup for Event Subscription 001](http://static.toastoven.net/prod_rds_mssql/event_subscription_001.png)
 
-* ❶ 이벤트 유형에 따라 이벤트 코드, 이벤트 소스를 좀더 세분화해서 선택할 수 있습니다. Event codes and event sources can be subdivided for each event type.   
-* ❷ 프로젝트의 멤버만 사용자 목록에 노출됩니다. 실명 인증을 한 멤버만 이름과 SMS 가 추가로 노출됩니다. Only project members are exposed on the list of users. Those whose names are authenticated only show their names and SMS, further on the page.  
+* ❶ Each event type can be subdivided into event codes and event sources.   
+* ❷ Only project members are exposed on the list of users. Those whose names are authenticated only show their names and SMS, further on the page.  
 
-![Popup for Event Subscription 이벤트 구독 팝업 002](http://static.toastoven.net/prod_rds_mssql/event_subscription_002.png)
+![Popup for Event Subscription 002](http://static.toastoven.net/prod_rds_mssql/event_subscription_002.png)
 
-* 이벤트 유형을 선택하면 해당 유형에 속하는 이벤트 코드를 선택할 수 있습니다. Select an event type and then choose an event code within. 
+* Select an event type and then choose an event code under. 
 
-![Popup for Event Subscription 이벤트 구독 팝업 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
+![Popup for Event Subscription 003](http://static.toastoven.net/prod_rds_mssql/event_subscription_003.png)
 
-* ❶ Auto-complete 자동 완성 입력을 지원합니다.
-    * 입력한 키워드에 따라 선택할 수 있는 이벤트 코드가 필터링 됩니다.
-    * 키보드 방향키 위, 아래 키로 이벤트 코드를 선택한 후 엔터를 누르면 자동완성됩니다.
-    * 이미 추가된 이벤트 코드는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
-* ❷ 마우스로 이벤트 코드를 선택할 수 있습니다.
+* ❶ Supports autocomplete. 
+    * Available event codes are filtered for a keyword. 
+    * Move up and down on your keyboard to select an event code, press Enter, and it is automataically completed. 
+    * You may delete an event code, which has already been added, by pressing the backspace or clicking [x].
+* ❷ You may select an event code with a click of the mouse. 
 
 ![Popup for Event Subscription 004](http://static.toastoven.net/prod_rds_mssql/event_subscription_004.png)
 
-* 이벤트 유형에 따른 이벤트 소스가 노출됩니다. Shows event source for each event type. 
-* ❶ 자동 완성 입력을 지원합니다. Supports auto-complete 
-    * 입력한 키워드에 따라 선택할 수 있는 이벤트 소스가 필터링 됩니다.
-    * 키보드 방향키 위, 아래 키로 이벤트 소스를 선택한 후 엔터를 누르면 자동완성됩니다.
-    * 이미 추가된 이벤트 소스는 백 스페이스키를 눌르거나 [x] 버튼을 클릭하면 삭제할 수 있습니다.
-* ❷ 마우스로 이벤트 소스를 선택할 수 있습니다.
+* Shows event sources for each event type. 
+* ❶ Supports autocomplete. 
+    * Available event sources are filtered for a keyword.
+    * Move up and down on your keyboard to select an event source, press Enter, and it is automatically completed. 
+    * You may delete an event source, which has already been added, by pressing the backspace or clicking [x].
+* ❷ You may select an event source with a click of the mouse. 
 
-## 파라미터 그룹 Parameter Groups
+## Parameter Groups
 
-파라미터 탭에서는 DB 인스턴스에 적용할 파라미터 그룹을 생성하거나, 파라미터 그룹의 파라미터를 수정할 수 있습니다.
+On Parameters, create a parameter group to be applied to a database instance, or modify parameters of a parameter group. 
 
-### 파라미터 그룹 생성 Create
+### Creating Parameter Groups
 
-파라미터 그룹을 생성하기 위해서는 기존 파라미터 그룹으로부터 기본값을 복사해야 합니다.
-파라미터 그룹 목록에서 복사하고자 하는 대상을 먼저 선택한 이후, [파라미터 그룹 복사] 버튼을 클릭합니다.
+To create a parameter group, default value must be copied from an existing parameter group. 
+Select a target from the list of parameter groups, and click [Copy Parameter Groups].
 
-![파라미터 그룹 리스트 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_001.png)
+![List of Parameter Groups 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_001.png)
 
-새로 생성할 파라미터 그룹의 이름 및 설명을 입력한 후 [복사] 버튼을 클릭하여 새로운 파라미터 그룹을 생성할 수 있습니다.
+Enter name and description of a parameter group to newly create, click [Copy] to create a parameter group. 
 
-![파라미터 그룹 복사 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_copy_001.png)
+![Copy Parameter Groups 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_copy_001.png)
 
-### 파라미터 그룹 수정 Modify
+### Modifying Parameter Groups
 
-파라미터 그룹 목록에서 수정하고자 하는 대상의 이름을 클릭하여, 파라미터 상세 화면으로 이동합니다.
+Click name of a target to modify from the list of parameter groups, and it goes to parameter details. 
 
-![파라미터 그룹 리스트 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_002.png)
+![List of Parameter Groups 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_002.png)
 
-파라미터 상세 화면의 상단에 있는 [파라미터 편집] 버튼을 클릭하여 편집 모드로 진입합니다.
+Click [Edit Parameters] on top of the parameter details to enter into the edit mode. 
 
-![파라미터 그룹 상세 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_001.png)
+![Parameter Group Details 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_001.png)
 
-파라미터를 수정하고 [변경 사항 저장] 버튼을 클릭하여 파라미터 그룹의 파라미터를 수정합니다.
+Modify the parameter, click [Save Changes] to modify parameters of the parameter group. 
 
-![파라미터 그룹 상세 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_002.png)
+![Parameter Group Details 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_002.png)
 
-* ❶ 키워드를 입력하여 노출되는 파라미터를 필터링할 수 있습니다.
+* ❶ 키워드를 입력하여 노출되는 파라미터를 필터링할 수 있습니다.  
 * ❷ 현재까지 수정된 모든 파라미터 변경사항이 취소하고 상세 화면으로 이동합니다.
 * ❸ 변경 전과 후를 비교하여 보여주는 팝업이 노출됩니다.
 
-![파라미터 그룹 상세 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_003.png)
+![Parameter Group Details 파라미터 그룹 상세 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_003.png)
 
 * ❹ 모든 파라미터의 값을 기본값으로 초기화합니다.
 * ❺❻ 파라미터 수정 과정에서 발생한 에러메시지가 노출됩니다.
 
-### 파라미터 그룹 비교 Compare
+### 파라미터 그룹 비교 Comparing Parameter Groups
 
-서로 다른 2개의 파라미터 그룹을 비교하여 다른 파라미터 값이 무엇이 있는지 확인할 수 있습니다.
-파라미터 목록에서 비교하고자 하는 파라미터 그룹 2개를 선택합니다.
+Compare two different parameter groups to find different parameters. 
+Select two parameter groups to compare from the list.
 
-![파라미터 그룹 리스트 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_003.png)
+![List of Parameter Groups 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_003.png)
 
-상단의 [파라미터 그룹 비교] 버튼을 클릭하여 서로 다른 파라미터의 값을 확인합니다.
+Click [Compare Parameter Groups] on top to check different parameters. 
 
-![파라미터 그룹 비교 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_diff_001.png)
+![Compare Parameter Groups 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_diff_001.png)
 
-## DB 보안 그룹 Database Security Groups
+## Database Security Groups
 
-From the Database Security Groups tab, database security group can be created or deleted. It is also possible to add, modify, or delete policy for each group.    보안 그룹 탭에서는 DB 보안 그룹의 생성 및 삭제가 가능합니다. 또한 DB 보안 그룹에 정책을 추가, 수정, 삭제할 수 있습니다.
-For more details on database security groups, see DB 보안 그룹에 대한 자세한 설명은 [Database Access](./database-connection).
+From the Database Security Groups tab, database security group can be created or deleted. It is also possible to add, modify, or delete policy for each group.   
+For more details on database security groups, see [Database Access](./database-connection).
 
-### DB 보안 그룹 생성 Create
+### Creating Database Security Groups
 
-DB 보안 그룹 목록 상단의 [DB 보안 그룹 생성] 버튼을 클릭하면, DB 보안 그룹을 생성할 수 있는 팝업이 노출됩니다.
+On top of the list of dabase security groups, click [Create Database Security Groups], and a popup shows to create a database security group. 
 
-![DB 보안 그룹 목록 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_list_001.png)
-![DB 보안 그룹 생성 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_create_001.png)
+![List of Database Security Groups 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_list_001.png)
+![Create Database Security Groups 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_create_001.png)
 
-* ❶ [+] 버튼을 클릭하여 보안 정책을 추가합니다.
+* ❶ Click [+] to add security policy. 
 
-팝업 하단의 [확인] 버튼을 클릭하여 DB 보안 그룹을 생성합니다.
+Click [OK] at the bottom of the popup to create a database security group.  
 
-### DB 보안 그룹 수정 Modify
+### Modifying Database Security Groups
 
-DB 보안 그룹 목록에서 수정하고자 하는 DB 보안 그룹을 선택 후, 상단의 [DB 보안 그룹 변경] 버튼을 클릭합니다.
+Select a database security group from the list, and click [Modify Database Security Groups] on top. 
 
-![DB 보안 그룹 수정 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_modify_001.png)
+![Modify Database Security Groups 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_modify_001.png)
 
 DB 보안 그룹의 이름과 설명을 수정할 수 있으며, 보안 정책은 별도로 수정해야 합니다.
 
-### 보안 정책 수정
+### 보안 정책 수정 Modifying Security Policy 
 
 DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 보안 정책을 확인, 수정할 수 있는 상세 보기 패널이 노출됩니다.
 
@@ -305,7 +303,7 @@ DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 
 
 상세 보기 패널에서 DB 보안 그룹 정책을 선택하면 정책을 변경, 삭제할 수 있습니다.
 
-## 서버 대시보드 Server Dashboard
+## Server Dashboard
 
 서버 대시보드 탭에서는 DB 인스턴스의 각종 성능 지표를 차트 형태로 확인할 수 있습니다.
 RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
@@ -317,9 +315,9 @@ RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2�
 * ❷ 레이아웃을 변경하여, 새로운 지표를 확인할 수 있습니다.
 * ❸ 차트 조회 기간을 현재 시각 기준으로 설정합니다.
 
-### 사용자 레이아웃의 활용
+### How to Use User Layouts 
 
-Click [Create Layouts레이아웃 만들기] to create a layout.  
+Click [Create Layout] to create a layout.  
 
 ![Server Dashboard 002](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_002.png)
 
@@ -341,6 +339,6 @@ Charts on a user layout are free to be modified in the layout or size.
 
 ![Server Dashboard 007](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_007.png)
 
-* ❶ Area 1 can be re-located with a drag & drop. 1번 영역을 마우스로 드래그 & 드랍하여 위치를 변경할 수 있습니다.
-* ❷ To change the size, drag and drop the bottom right area.  우측 하단 영역을 마우스로 드래그 & 드랍하여 크기를 변경할 수 있습니다.
-* ❸ Charts can be removed. 추가된 차트를 제거할 수 있습니다.
+* ❶ Area 1 can be re-located with a drag & drop. 
+* ❷ To change the size, drag and drop the bottom right area.  
+* ❸ Charts can be removed. 
