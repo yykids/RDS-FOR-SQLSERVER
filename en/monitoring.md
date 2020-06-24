@@ -72,9 +72,9 @@ An event refers to an important incident incurred by RDS for SQL Server or user.
 | DB_SECURITY_GROUP | DB_SECURITY_GROUP_MODIFIED | DB security group modified |
 | DB_SECURITY_GROUP | DB_SECURITY_GROUP_DELETED | DB security group deleted |
 
-### Subscription of Events
+### Subscribing Events
 
-You may subscribe to events by each category, code or source. When subscribed by event category, for example, you'll be notified on every event code included in the event category. If the range of notification is too broad, subscription may be divided by event code or source.  
+You may subscribe events by each category, code or source. When subscribed by event category, for example, you'll be notified on every event code included in the event category. If the range of notification is too broad, subscription may be divided by event code or source.  
 
 Only project members can be selected as notified users. By default, event notification is sent by email, and if mobile phone number is registered from real-name verification, additional notification is sent via SMS. In addition to email and SMS, with webhook registration, HTTP request is sent on a pre-defined form, which is like below. 
 
