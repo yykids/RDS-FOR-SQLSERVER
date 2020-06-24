@@ -229,13 +229,13 @@ Select a target from the list of parameter groups, and click [Copy Parameter Gro
 
 ![List of Parameter Groups 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_001.png)
 
-Enter name and description of a parameter group to newly create, click [Copy] to create a parameter group. 
+Enter name and description of a parameter group to newly create, and click [Copy] to create a parameter group. 
 
 ![Copy Parameter Groups 001](http://static.toastoven.net/prod_rds_mssql/parameter_group_copy_001.png)
 
 ### Modifying Parameter Groups
 
-Click name of a target to modify from the list of parameter groups, and it goes to parameter details. 
+Click name of a target to modify from the list of parameter groups, and it goes to the parameter details. 
 
 ![List of Parameter Groups 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_list_002.png)
 
@@ -247,16 +247,16 @@ Modify the parameter, click [Save Changes] to modify parameters of the parameter
 
 ![Parameter Group Details 002](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_002.png)
 
-* ❶ 키워드를 입력하여 노출되는 파라미터를 필터링할 수 있습니다.  
-* ❷ 현재까지 수정된 모든 파라미터 변경사항이 취소하고 상세 화면으로 이동합니다.
-* ❸ 변경 전과 후를 비교하여 보여주는 팝업이 노출됩니다.
+* ❶ You may enter keyword to filter parameters that are exposed. 
+* ❷ All parameter changes are cancelled and it goes to the detail page. 
+* ❸ A popup shows to compare before and after changes are applied. 
 
-![Parameter Group Details 파라미터 그룹 상세 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_003.png)
+![Parameter Group Details 003](http://static.toastoven.net/prod_rds_mssql/parameter_group_detail_003.png)
 
-* ❹ 모든 파라미터의 값을 기본값으로 초기화합니다.
-* ❺❻ 파라미터 수정 과정에서 발생한 에러메시지가 노출됩니다.
+* ❹ All parameters are returned to default. 
+* ❺❻ Error messages that occur during parameter modification show. 
 
-### 파라미터 그룹 비교 Comparing Parameter Groups
+### Comparing Parameter Groups
 
 Compare two different parameter groups to find different parameters. 
 Select two parameter groups to compare from the list.
@@ -269,7 +269,7 @@ Click [Compare Parameter Groups] on top to check different parameters.
 
 ## Database Security Groups
 
-From the Database Security Groups tab, database security group can be created or deleted. It is also possible to add, modify, or delete policy for each group.   
+From the Database Security Groups tab, a database security group can be created or deleted. It is also possible to add, modify, or delete policy for each group.   
 For more details on database security groups, see [Database Access](./database-connection).
 
 ### Creating Database Security Groups
@@ -289,31 +289,31 @@ Select a database security group from the list, and click [Modify Database Secur
 
 ![Modify Database Security Groups 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_modify_001.png)
 
-DB 보안 그룹의 이름과 설명을 수정할 수 있으며, 보안 정책은 별도로 수정해야 합니다.
+You may modify name and description of a database security group, although security policy can be modified from a separate setting.
 
-### 보안 정책 수정 Modifying Security Policy 
+### Modifying Security Policy 
 
-DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 보안 정책을 확인, 수정할 수 있는 상세 보기 패널이 노출됩니다.
+Select a database security group from the list, and View Details panel show at the bottom of the page to confirm and modify security policy. 
 
-![DB 보안 그룹 상세 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_001.png)
+![Database Security Group Details 001](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_001.png)
 
-상세 보기 패널의 [보안 정책 생성] 버튼을 클릭하면, 보안 정책을 생성할 수 있는 팝업이 노출됩니다.
+Click [Create Security Policy] from the panel, and a popup shows to create security policy. 
 
-![DB 보안 그룹 상세 002](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_002.png)
+![Database Security Group Details 002](http://static.toastoven.net/prod_rds_mssql/db_security_group_detail_002.png)Data
 
-상세 보기 패널에서 DB 보안 그룹 정책을 선택하면 정책을 변경, 삭제할 수 있습니다.
+Select a database security group policy from the View Details panel to change or delete policy. 
 
 ## Server Dashboard
 
-서버 대시보드 탭에서는 DB 인스턴스의 각종 성능 지표를 차트 형태로 확인할 수 있습니다.
-RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
-기본 레이아웃은 삭제 및 변경이 불가능합니다.
+On the Server Dashboard tab, check out performance indicators of a database instance on a chart.  
+RDS for SQL Server, by default, provides two layouts, such as basic system indicators and basic SQL server indicators. 
+Default layout cannot be deleted or changed. 
 
 ![Server Dashboard 001](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_001.png)
 
-* ❶ 생성된 DB 인스턴스가 목록에 노출됩니다. DB 인스턴스 선택 시, 연관된 차트를 확인할 수 있습니다.
-* ❷ 레이아웃을 변경하여, 새로운 지표를 확인할 수 있습니다.
-* ❸ 차트 조회 기간을 현재 시각 기준으로 설정합니다.
+* ❶ Shows created database instances on the list. By selecting a database instance, relevant charts become available. 
+* ❷ With layout changes, find out new indicators. 
+* ❸ Set the chart query period based on the current time. 
 
 ### How to Use User Layouts 
 
