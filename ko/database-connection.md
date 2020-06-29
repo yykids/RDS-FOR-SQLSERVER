@@ -1,4 +1,4 @@
-## Database > RDS for SQL Server > 데이터베이스 접속
+## Database > RDS for MS-SQL > 데이터베이스 접속
 
 DB 인스턴스의 운영체제에 직접 접근할 수 없으며, 오직 DB 인스턴스 생성 시 입력하신 포트를 통해서 데이터베이스로만 접근 할 수 있습니다.
 

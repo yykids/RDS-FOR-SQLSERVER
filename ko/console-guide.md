@@ -1,4 +1,4 @@
-## Database > RDS for SQL Server > 콘솔 사용 가이드
+## Database > RDS for MS-SQL > 콘솔 사용 가이드
 
 ## DB 인스턴스
 
@@ -137,7 +137,7 @@ DB 인스턴스를 선택하고, 이름을 입력한 후 [생성] 버튼을 클�
 
 ## 복원
 
-RDS for SQL Server 에서는 백업을 이용한 복원과 시점 복원을 지원합니다.
+RDS for MS-SQL에서는 백업을 이용한 복원과 시점 복원을 지원합니다.
 복원에 대한 자세한 사항은 [백업 및 복원](./backup-restore) 을 참고합니다.
 
 ### 백업을 이용한 복원
@@ -313,7 +313,7 @@ DB 보안 그룹 목록에서 DB 보안 그룹을 선택하면 화면 하단에 
 ## 서버 대시보드
 
 서버 대시보드 탭에서는 DB 인스턴스의 각종 성능 지표를 차트 형태로 확인할 수 있습니다.
-RDS for SQL Server 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
+RDS for MS-SQL 는 기본 시스템 지표 및 기본 SQL 서버 지표, 2개의 기본 레이아웃을 제공합니다.
 기본 레이아웃은 삭제 및 변경이 불가능합니다.
 
 ![서버 대시보드 001](http://static.toastoven.net/prod_rds_mssql/server_dashboard_list_001.png)
