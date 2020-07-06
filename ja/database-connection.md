@@ -1,4 +1,4 @@
-## Database > RDS for SQL Server > データベース接続
+## Database > RDS for MS-SQL > データベース接続
 
 DBインスタンスのOSに直接アクセスできません。DBインスタンス作成時、入力したポートを通してデータベースからアクセスできます。
 
