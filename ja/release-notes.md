@@ -1,4 +1,4 @@
-﻿## Database > RDS for MS-SQL > リリースノート
+## Database > RDS for MS-SQL > リリースノート
 
 ### 2020. 07. 14
 
