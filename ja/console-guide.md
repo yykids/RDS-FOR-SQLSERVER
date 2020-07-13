@@ -74,13 +74,13 @@ DBインスタンスを選択すると、画面下に詳細表示パネルが表
 
 #### モニタリング
 
-選択したDBインスタンスに関連する指標をチャートで確認できます。詳細な使用方法は[サーバーダッシュボード](./console-guide#_17)を参照してください。
+選択したDBインスタンスに関連する指標をチャートで確認できます。詳細な使用方法は[サーバーダッシュボード](./console-guide#_20)を参照してください。
 
 ![DBインスタンス詳細 > モニタリング001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
 #### イベント
 
-選択したDBインスタンスに関連するイベントを確認できます。詳細な使用方法は[イベント](./console-guide#_9)を参照してください。
+選択したDBインスタンスに関連するイベントを確認できます。詳細な使用方法は[イベント](./console-guide#_12)を参照してください。
 
 ![DBインスタンス詳細 > イベント001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 

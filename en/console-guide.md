@@ -73,13 +73,13 @@ You may check basic information of a selected database instance.
 
 #### Monitoring
 
-Find out relevant indicators of a selected database instance on a chart. For more detail usage, see [Server Dashboard](./console-guide#_17). 
+Find out relevant indicators of a selected database instance on a chart. For more detail usage, see [Server Dashboard](./console-guide#_20). 
 
 ![Database Instance Details > Monitoring 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_mon_001.png)
 
 #### Events
 
-Check out relevant events of a selected database instance. For more details, see [Events](./console-guide#_9).
+Check out relevant events of a selected database instance. For more details, see [Events](./console-guide#_12).
 
 ![DB Instance Details > Events 001](http://static.toastoven.net/prod_rds_mssql/db_instance_detail_event_001.png)
 
