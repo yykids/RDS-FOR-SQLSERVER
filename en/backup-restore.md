@@ -46,4 +46,7 @@ With manual or auto backups, database instance can be restored. Restoration time
 ### Point-in-Time Restoration during Backup Retention Period 
 
 If auto backup is enabled for a database instance, it is available to restore data to a time point during retention period. To enable a point-in-time restoration, log backup is required. RDS for SQL Server executes auto log backups at every 5 minutes, and stores them at a backup storage. 
+If the auto backup is enabled, it detects the database created by user every 5 minutes and backs up the entire database separately. 
+Therefore, when user tries to roll back to the time the DB was just created, it won't be restored properly. 
+Provided that the DB instance is stable with no extra tasks performed, user should select a time at least 5 minutes after its creation. 
 
