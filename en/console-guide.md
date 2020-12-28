@@ -33,6 +33,15 @@ One page shows up to 50 database instances on the list.
 * ❺ Refers to the current CPU usage volume and the number of active sessions. 
 * ❻ Refers to the status of database instance. Each status shows different value and color of status. 
 
+### Restarting DB instance
+
+The Microsoft SQL Server process of the DB instance can be restarted. DB instances can be restarted using the failover feature when they are using the high availability feature.
+
+![DB Instance List > Restart 001](http://static.toastoven.net/prod_rds_mssql/20201215/bordered/db_instance_restart_001_kr.png)
+
+* ❶ If the DB instance is restarted, the Microsoft SQL Server process will be restarted as well. If the Microsoft SQL Server process fails to be restarted, the DB instance VM will be rebooted.
+* ❷ With the high availability feature, failover can also be used to restart instances.
+
 ### Modifying Database Instances
 
 Available database instances can be easily modified in the setting via web console. 
