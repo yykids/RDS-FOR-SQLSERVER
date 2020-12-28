@@ -32,6 +32,8 @@ Only the SQL Server 2016 Standard version is supported.
 Each type of database instance has different CPU core count and memory volume. 
 To create a database instance, an appropriate type must be selected depending on the database workload. 
 
+
+
 | Type    | Description |
 | ------- | -------------------------------------------------|
 | m2 | Configures balance between CPU and memory.   |
@@ -53,3 +55,17 @@ It is easy to change the size of already-created storage via web console.
 > [Caution]
 > Changing already-created storage size requires minutes of downtime since database instance must be closed. 
 > The type of already-created storage cannot be changed. 
+
+## High Availability DB Instance
+
+RDS for MS-SQL provides the high availability feature by using the mirroring feature of the Microsoft SQL Server database that has the primary server, secondary sever and monitoring server. The primary server and the secondary server are created in different availability areas.
+
+### Failover action 
+
+A failover action automatically takes place when the primary server becomes unavailable due to an unexpected failure. Upon failover, the failed primary server is halted to prevent split brain and the secondary server takes over the primary server. Applications do not have to be adjusted for this change, as the A record of the internal and external domains that are used to connect is automatically switched from the primary server to the secondary server.
+When failover is complete, high availability DB instances will disappear and the rest of DB instances are separated into two groups: the failed DB instances and the DB instances promoted due to the failure. The promoted DB instances inherit all the configurations of existing DB instances except backups. The promoted DB instances will not perform backed up immediately after the promotion. This is to prevent any system load after the failover action.
+DB instances with failover completed can be restarted using the [Restart] button.
+
+### Manual failover action
+
+A high availability DB instance can be manually restarted after the failover action to deal with failover. When restarting a DB instance using failover, manual failover is performed and the roles of the primary and secondary servers are switched. During failover, both primary and secondary servers will restart their Microsoft SQL Server process and their internal and external domain IPs will be changed. Connection to those servers may fail from a couple of seconds to a couple of minutes until the domains are successfully changed. When failover is complete, the system automatically performs a backup.
