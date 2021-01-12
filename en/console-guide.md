@@ -69,7 +69,17 @@ You may check basic information of a selected database instance.
 * ❶ Click [Change] to change name of a database instance. 
 * ❷ Click [Copy] to copy ID of database instance onto clipboard. 
 * ❸ Shows IP information allowing the access to database instances. For a floating IP, another IP starting with 133 is exposed, and external access may be available depending on the database security group setting.   
-* ❹ Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
+
+![DB 인스턴스 상세 > 기본 정보 001 도메인](http://static.toastoven.net/prod_rds_mssql/20201215/bordered/db_instance_detail_inst_001_domain_kr.png)
+
+* ❹ Click [Copy] to copy domain information onto clipboard.
+* ❺ Shows the database replication status of a high availability DB instance.
+    * It takes some time for the database to be exposed to the web console after its creation.
+    * Failover is not performed for databases of which status is not `replicated.`
+* ❻ Shows the security group of the applied DB. Hover the cursor over a DB security group name to see its security group rules.
+* ❼ Check out the database security group which is now applied. Put a mouse cursor on the name of the security group and find out the rules of the group. 
+![DB 인스턴스 상세 > 기본 정보 001 보안 규칙](http://static.toastoven.net/prod_rds_mssql/20201215/bordered/db_instance_detail_inst_001_dsg_kr.png)
+
 
 #### Monitoring
 
